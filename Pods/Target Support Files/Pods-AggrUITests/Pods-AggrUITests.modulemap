@@ -1,0 +1,6 @@
+framework module Pods_AggrUITests {
+  umbrella header "Pods-AggrUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
