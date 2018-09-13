@@ -18,6 +18,27 @@
 		C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
 		C3024A5F2148945B0075928B /* AggrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A5E2148945B0075928B /* AggrTests.swift */; };
 		C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A692148945B0075928B /* AggrUITests.swift */; };
+		C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
+		C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
+		C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
+		C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
+		C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
+		C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
+		C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
+		C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
+		C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
+		C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
+		C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
+		C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
+		C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
+		C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
+		C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
+		C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
+		C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
+		C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
+		C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
+		C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
+		C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +77,13 @@
 		C3024A652148945B0075928B /* AggrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3024A692148945B0075928B /* AggrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrUITests.swift; sourceTree = "<group>"; };
 		C3024A6B2148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3942985214ADC7A00AEB1E1 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		C3942989214ADE4C00AEB1E1 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		C394298D214ADEC500AEB1E1 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
+		C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOfoVehicles.swift; sourceTree = "<group>"; };
+		C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLimeBikeVehicles.swift; sourceTree = "<group>"; };
+		C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBirdVehicles.swift; sourceTree = "<group>"; };
+		C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterData.swift; sourceTree = "<group>"; };
 		D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aggr/Pods-Aggr.release.xcconfig"; sourceTree = "<group>"; };
 		E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AggrTests/Pods-AggrTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +155,13 @@
 			isa = PBXGroup;
 			children = (
 				C3024A46214894590075928B /* AppDelegate.swift */,
+				C3942985214ADC7A00AEB1E1 /* Vehicle.swift */,
+				C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */,
+				C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */,
+				C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */,
+				C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */,
+				C394298D214ADEC500AEB1E1 /* VehicleType.swift */,
+				C3942989214ADE4C00AEB1E1 /* Company.swift */,
 				C3024A48214894590075928B /* ViewController.swift */,
 				C3024A4A214894590075928B /* Main.storyboard */,
 				C3024A502148945B0075928B /* Assets.xcassets */,
@@ -304,15 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AggrTests-checkManifestLockResult.txt",
 			);
@@ -326,15 +357,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Aggr-checkManifestLockResult.txt",
 			);
@@ -348,16 +375,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
@@ -372,15 +395,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AggrUITests-checkManifestLockResult.txt",
 			);
@@ -396,8 +415,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
+				C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
+				C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
+				C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */,
 				C3024A49214894590075928B /* ViewController.swift in Sources */,
+				C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
+				C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */,
+				C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
 				C3024A47214894590075928B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +432,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
+				C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
+				C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
+				C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
+				C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
+				C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */,
+				C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +447,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
+				C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
+				C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
+				C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
+				C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
+				C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */,
+				C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
