@@ -26,12 +26,15 @@ class Vehicle {
     ///   - owner: The owning company (i.e. limeBike or ofo)
     ///   - type: The type of vehicle that it is (i.e. bike or scooter)
     ///   - scooterInfo: An optional variable used to transfer scooter-exclusive data that does not apply to non-battery-operated vehicles such as bikes
-    init(location: CLLocationCoordinate2D, owner: Company, type: VehicleType, scooterInfo: ScooterData?) {
+    init (location: CLLocationCoordinate2D, owner: Company, type: VehicleType, scooterInfo: ScooterData?) {
         self.location = location
         self.owner = owner
         self.type = type
         self.scooterInfo = scooterInfo
     }
+    
+    
+    // TODO: Function to make a marker.
     
     
 }
