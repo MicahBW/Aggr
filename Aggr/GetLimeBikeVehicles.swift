@@ -8,7 +8,9 @@
 
 import Foundation
 import CoreLocation
-
+/*
 func getLimeBikeVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
     // TODO: LimeBike Get Function
 }
+
+ */

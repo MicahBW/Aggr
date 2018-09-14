@@ -8,7 +8,8 @@
 
 import Foundation
 import CoreLocation
-
+/*
 func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
     // TODO: Bird Get Function
 }
+*/
