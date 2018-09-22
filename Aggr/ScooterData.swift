@@ -12,7 +12,7 @@ import CoreLocation
 
 
 /// A struct for transmitting scooter-exclusive data that does not apply to non-battery-operated vehicles such as bikes
-struct ScooterData {
+struct ScooterData  {  
     var batteryCharge: Int?
     var range: CLLocationDistance?
     
