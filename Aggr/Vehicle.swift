@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 
 /// A class representing a vehicle, complete with location, the owning company, the type of vehicle, and the scooterData if it is a scooter
@@ -31,6 +32,11 @@ class Vehicle {
         self.owner = owner
         self.type = type
         self.scooterInfo = scooterInfo
+    }
+    
+    
+    var tableViewCell : VehicleTableViewCell {
+        return VehicleTableViewCell(providingCompany: self.owner, style: UITableViewCellStyle.default, reuseIdentifier: nil)
     }
     
     
