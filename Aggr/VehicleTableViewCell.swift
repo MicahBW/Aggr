@@ -25,6 +25,8 @@ class VehicleTableViewCell: UITableViewCell {
     
     
     private func configure(providingCompany : Company) {
+        
+        imgView.frame = frame(forAlignmentRect: CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.height, height: self.frame.height))
         imgView.image = logoForCompany(providingCompany)
         imgView.makeCircular()
     }
