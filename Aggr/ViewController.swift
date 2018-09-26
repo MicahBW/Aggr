@@ -14,11 +14,16 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     var mapView: GMSMapView!
     
+    
+    
     override func loadView() {
         
         let camera = GMSCameraPosition.camera(withLatitude: 1.285, longitude: 103.848, zoom: 12)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         self.view = mapView
+        
+
+
 
         
         
@@ -34,6 +39,14 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    // MARK: - MY FUNCTIONS AND SETTINGS
+
+    
+    
 
 
 }

@@ -23,10 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // GMServices providing keys
+        
+        // MARK: Replaces the Main.storyboard
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+
+        // MARK: GMServices providing keys
         GMSServices.provideAPIKey("AIzaSyCeyTRCibAy4ax2biVBzO76yeQZWPA3ULw")
         GMSPlacesClient.provideAPIKey("AIzaSyCeyTRCibAy4ax2biVBzO76yeQZWPA3ULw")
-
+        
+        // MARK: Handling controller
+        let controller = ViewController()
+        let navigationController = UINavigationController(rootViewController: controller)
+        window?.rootViewController = navigationController
+        
+        // Hide the status bar
+        navigationController.setNavigationBarHidden(true, animated: true)
+        
+        
         
         return true
     }
@@ -99,6 +113,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    
+    // MARK: - MY FUNCTIONS AND SETTINGS
+    
+
 
 }
 
