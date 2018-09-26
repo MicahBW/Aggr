@@ -6,27 +6,44 @@
 //  Copyright © 2018 AggrCo. All rights reserved.
 //
 
+
+
+///        ViewController
+///     GMSMapView     TableView
+/// https://stackoverflow.com/questions/23301618/table-views-view-controller-vs-table-view-controller
+///
+///
+///
+
+
+
 import UIKit
 import GoogleMaps
 import GooglePlaces
 
 class ViewController: UIViewController, GMSMapViewDelegate {
     
+    
+    var encompassingView: UIView!
     var mapView: GMSMapView!
+    var tableView: VehicleTableView!
+
     
     
     
     override func loadView() {
         
+        // Deal with GMS
         let camera = GMSCameraPosition.camera(withLatitude: 1.285, longitude: 103.848, zoom: 12)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
-        self.view = mapView
+            //self.view = mapView
         
-
-
-
+        // Deal with VehicleTableView
+        let tableView = VehicleTableView(frame: CGRect()
         
+        // Combine the two views
         
+    
     }
     
     
@@ -42,10 +59,9 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     
     
-    
     // MARK: - MY FUNCTIONS AND SETTINGS
-
     
+
     
 
 
