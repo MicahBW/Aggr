@@ -8,9 +8,17 @@
 
 import Foundation
 import CoreLocation
-/*
+
+
+///
+/// Gets all of the LimeBike vehiculars in a certain range of the user's location
+///
+/// - Parameters:
+///   - range: Range within to get vehicles
+///   - location:  Location to get them
+/// - Returns: List of vehicles
 func getLimeBikeVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
     // TODO: LimeBike Get Function
 }
 
- */
+ 

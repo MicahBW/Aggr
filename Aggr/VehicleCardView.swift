@@ -20,12 +20,17 @@ enum CardPosition {
 
 class VehicleCardView: UIView {
     
-    var position: CardPosition!
+    var position: CardPosition
     
     
     
     override init(frame: CGRect) {
-        <#code#>
+        //TODO: 
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     
@@ -37,7 +42,7 @@ class VehicleCardView: UIView {
     
     var textMultiplyer : CGFloat{ //Everything else can be a multiple of this text size
         switch position {
-        case center:
+        case CardPosition.center:
             return 1
         default:
             return 0.8 // TODO: Change this to a way to mess w it, make it match, maybe distance to screen
