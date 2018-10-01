@@ -34,10 +34,11 @@ class Vehicle {
         self.scooterInfo = scooterInfo
     }
     
-    
+    /*
     var tableViewCell : VehicleTableViewCell {
         return VehicleTableViewCell(providingCompany: self.owner, style: UITableViewCellStyle.default, reuseIdentifier: nil)
     }
+ */
     
     
     // TODO: Function to make a marker.

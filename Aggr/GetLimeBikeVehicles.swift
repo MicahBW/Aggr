@@ -17,8 +17,10 @@ import CoreLocation
 ///   - range: Range within to get vehicles
 ///   - location:  Location to get them
 /// - Returns: List of vehicles
+/*
 func getLimeBikeVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
     // TODO: LimeBike Get Function
 }
+ */
 
  

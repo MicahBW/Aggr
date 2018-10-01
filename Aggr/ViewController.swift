@@ -26,7 +26,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     var encompassingView: UIView!
     var mapView: GMSMapView!
-    var tableView: VehicleTableView!
+    //var tableView: VehicleTableView!
 
     
     
@@ -34,17 +34,25 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     override func loadView() {
         
         // Deal with GMS
-        let camera = GMSCameraPosition.camera(withLatitude: 1.285, longitude: 103.848, zoom: 12)
+        let camera = GMSCameraPosition.camera(withLatitude: 38.647202, longitude: -90.310471, zoom: 12)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
-            //self.view = mapView
+        self.view = mapView
         
         // Deal with VehicleTableView
-        let tableView = VehicleTableView(frame: CGRect()
+       // let tableView = VehicleTableView(frame: CGRect()
         
         // Combine the two views
         
+        var ve : Vehicle = Vehicle(location: CLLocationCoordinate2DMake(38.647202, -90.310471), owner: Company.bird, type: VehicleType.bike, scooterInfo: nil);
+        
+        var mark : VehicleMarker = VehicleMarker(forVehicle: ve)
+        
+        mark.map = mapView
+        
     
     }
+    
+    
     
     
     override func viewDidLoad() {

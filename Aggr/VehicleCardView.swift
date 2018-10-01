@@ -17,7 +17,7 @@ enum CardPosition {
     case right
 }
 
-
+/*
 class VehicleCardView: UIView {
     
     var position: CardPosition
@@ -61,3 +61,4 @@ class VehicleCardView: UIView {
     */
 
 }
+*/

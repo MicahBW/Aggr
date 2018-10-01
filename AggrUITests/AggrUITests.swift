@@ -7,6 +7,12 @@
 //
 
 import XCTest
+import CoreLocation
+
+/*
+ You can animate the addition of new markers to the map by setting the marker.appearAnimation property to kGMSMarkerAnimationPop.
+ 
+*/
 
 class AggrUITests: XCTestCase {
         
@@ -28,6 +34,12 @@ class AggrUITests: XCTestCase {
         super.tearDown()
     }
     
+    
+    func addMarkerToMap() {
+        var ve : Vehicle = Vehicle(location: CLLocationCoordinate2DMake(0, 0), owner: Company.bird, type: VehicleType.bike, scooterInfo: nil);
+        
+        var mark : VehicleMarker = VehicleMarker(forVehicle: ve)
+    }
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
