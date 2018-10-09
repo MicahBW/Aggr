@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */; };
 		37151A47CA3D12B8B2FDBA01 /* Pods_Aggr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58637A15E22ECCBA59DAB60 /* Pods_Aggr.framework */; };
 		38224C21B6413F755FB8F244 /* Pods_AggrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */; };
 		9D5E0DFEEC0EC3E77C55A37C /* Pods_AggrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */; };
@@ -17,9 +18,6 @@
 		C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
 		C3024A5F2148945B0075928B /* AggrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A5E2148945B0075928B /* AggrTests.swift */; };
 		C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A692148945B0075928B /* AggrUITests.swift */; };
-		C34AA2102162DA0500453B0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AA20F2162DA0500453B0F /* Constants.swift */; };
-		C34AA2112162DA0500453B0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AA20F2162DA0500453B0F /* Constants.swift */; };
-		C34AA2122162DA0500453B0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AA20F2162DA0500453B0F /* Constants.swift */; };
 		C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
 		C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
 		C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
@@ -72,6 +70,7 @@
 /* Begin PBXFileReference section */
 		05C7DAAE7CBB72E87F9AF547 /* Pods-Aggr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aggr/Pods-Aggr.debug.xcconfig"; sourceTree = "<group>"; };
 		0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBirdVehicles.swift; sourceTree = "<group>"; };
 		64443E80E71EDBC68C8255BC /* Pods-AggrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AggrTests/Pods-AggrTests.release.xcconfig"; sourceTree = "<group>"; };
 		682E63B565C50EBCCC36A61C /* Pods-AggrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AggrUITests/Pods-AggrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3024A43214894590075928B /* Aggr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aggr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +86,6 @@
 		C3024A652148945B0075928B /* AggrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3024A692148945B0075928B /* AggrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrUITests.swift; sourceTree = "<group>"; };
 		C3024A6B2148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C34AA20F2162DA0500453B0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndImageHandling.swift; sourceTree = "<group>"; };
 		C35F6E16215C293C00F01F13 /* VehicleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCardView.swift; sourceTree = "<group>"; };
 		C3942985214ADC7A00AEB1E1 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
@@ -180,11 +178,11 @@
 				C394298D214ADEC500AEB1E1 /* VehicleType.swift */,
 				C3942989214ADE4C00AEB1E1 /* Company.swift */,
 				C3024A48214894590075928B /* ViewController.swift */,
-				C34AA20F2162DA0500453B0F /* Constants.swift */,
 				C3024A502148945B0075928B /* Assets.xcassets */,
 				C3024A522148945B0075928B /* LaunchScreen.storyboard */,
 				C3024A552148945B0075928B /* Info.plist */,
 				C3024A4D214894590075928B /* Aggr.xcdatamodeld */,
+				21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */,
 			);
 			path = Aggr;
 			sourceTree = "<group>";
@@ -442,9 +440,9 @@
 				C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */,
 				C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
 				C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
-				C34AA2102162DA0500453B0F /* Constants.swift in Sources */,
 				C3024A47214894590075928B /* AppDelegate.swift in Sources */,
 				C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
+				21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +461,6 @@
 				C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
 				C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
 				C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
-				C34AA2112162DA0500453B0F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +479,6 @@
 				C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
 				C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
 				C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
-				C34AA2122162DA0500453B0F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
