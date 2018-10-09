@@ -9,6 +9,7 @@
 import Foundation
 import GoogleMaps
 import CoreLocation
+import UIKit
 
 //https://developers.google.com/maps/documentation/android-sdk/marker
 
@@ -39,8 +40,7 @@ class VehicleMarker : GMSMarker {
     
     var vehicle : Vehicle
     
-    //vehicleType : VehicleType
-    //init (position markerPosition: CLLocationCoordinate2D, styleInfo: VehicleMarkerStyle, title markerTitle: String? = nil, snippet markerSnippet: String? = nil) {
+    
     init (forVehicle vehicle: Vehicle) {
         
         self.vehicle = vehicle
@@ -51,16 +51,25 @@ class VehicleMarker : GMSMarker {
         self.tracksViewChanges = true
         
         
-        
-        //self.icon = GMSMarker.markerImage(with: <#T##UIColor?#>)
-        
         // Add vehicle-specific info
         
         self.position = self.vehicle.location
-        self.icon = VehicleMarkerStyle(forVehicle: self.vehicle).icon
+        //self.icon = VehicleMarkerStyle(forVehicle: self.vehicle).icon
+        self.icon = markerIcon
 
         
         
+    }
+    
+    
+    var markerIcon : UIImage {
+        let retIcon = logoForVehicleType(vehicle.type)
+        //retIcon.tint(color: UIColor.yellow)s
+        //UIImageView.tintColor = UIColor.yellow
+        //let myimage = retIcon.withRenderingMode(.alwaysTemplate)
+        //return retIcon.tint(color: UIColor.yellow)
+        //return retIcon.tinted(color: UIColor.purple)
+        return retIcon;
     }
     
     
