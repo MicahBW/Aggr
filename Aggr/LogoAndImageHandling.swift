@@ -11,17 +11,67 @@ import UIKit
 
 
 
-
+//MARK: - Extend UIImageView
 extension UIImageView {
+    
     func makeCircular() -> Void {
         self.layer.cornerRadius = self.frame.height/2
     }
+    
+    
+    func setImageColor(color: UIColor) {
+        let templateImage = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.image = templateImage
+        self.tintColor = color
+    }
+    
+    
 }
+
+/*
+extension UIView {
+    
+    // If Swift version is lower than 4.2,
+    // You should change the name. (ex. var renderedImage: UIImage?)
+    
+    var snapImage: UIImage? {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in layer.render(in: rendererContext.cgContext) }
+    }
+}
+*/
+
+extension UIImage
+{
+    
+    
+    
+    /*
+    func tinted(color: UIColor) -> UIImage {
+        
+        let imgView = UIImageView(image: self)
+        let templateImage = imgView.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        imgView.image = templateImage
+        imgView.tintColor = color
+        
+        //return imgView.snapImage!
+        
+        
+    }
+ */
+    
+    
+    
+    
+    
+    
+}
+
 
 
 func logoForCompany(_ company : Company) -> UIImage {
     var companyLogo : UIImage
-    
+    //TODO: Guard them!
     switch company {
     case Company.bird:
         companyLogo = #imageLiteral(resourceName: "BirdIcon")
@@ -56,12 +106,12 @@ func logoForVehicleType(_ type: VehicleType) -> UIImage {
     var returnImg : UIImage
     switch type {
     case VehicleType.bike:
-        returnImg = UIImage(named: "BikeIcon")!
+        returnImg = UIImage(named: "BikeMarker")!
     case VehicleType.scooter:
-        returnImg = UIImage(named: "ScooterIcon")!
+        returnImg = UIImage(named: "ScooterMarker")!
     }
     
-    return imageWithImage(image: returnImg, scaledToSize: Constants.ImageHandling.markerSize)
+    return imageWithImage(image: returnImg, scaledToSize: Constants.ImageHandling.Markers.markerSize)
 }
 
 

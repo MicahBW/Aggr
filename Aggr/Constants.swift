@@ -13,8 +13,33 @@ import CoreGraphics
 struct Constants {
     
     struct ImageHandling {
-        static let markerSize = CGSize(width: 45, height: 45)
         
+        struct Markers {
         
+            private static let heightToWidthMarkerRatio : CGFloat =  (2048/1447)  // beware of typecasting the other one as an int!!!!
+            
+            private static let markerWidth : CGFloat = 45
+
+            public static let markerSize : CGSize = CGSize(width: markerWidth, height: heightToWidthMarkerRatio * markerWidth)
+            
+        }
+    }
+    
+    struct GettingVehicles {
+        
+        public static func companyIsEnabled(company: Company) -> Bool {
+            switch company {
+            case Company.bird:
+                return false
+            case Company.limeBike:
+                return false
+            case Company.ofo:
+                return false
+            default:
+                return false
+            }
+            
+            
+        }
     }
 }
