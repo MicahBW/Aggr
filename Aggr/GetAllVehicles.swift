@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 
 func getAllVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
@@ -32,10 +33,35 @@ func getAllVehicles(withinRange range: CLLocationDistance, ofLocation location: 
 
 
 
+
+
+
+
+/// Takes an array of vehicles and sorts them by distance from the user, with the closest being first and the furthest being last.
+///
+/// - Parameter vehicles: An array of unsorted vehicles
+/// - Returns: An array of vehicles sorted from closest (first) to furthest
 func sortVehiclesByDistance(_ vehicles : [Vehicle]) -> [Vehicle] {
     var sorted : [Vehicle]
+    //IDEA: Add boolean input value to determine the direction of sorting and traversal
+    // Make certain that vehicles array is not empty
+    if vehicles.count == 0 { return [] }
     
-    if let vehicles[0] = FIRST_EXCEPTION\
+    for vehicle in vehicles {
+        var hasBeenInserted : Bool = false;
+        var counter : Int = 0
+        for compareTo in sorted {
+            if vehicle.distanceFromUser < compareTo.distanceFromUser { // If the distance is less than the current `distance found on the transversal
+                sorted.insert(vehicle, at: counter)
+                hasBeenInserted = true
+                break
+            }
+            counter += 1;
+        }
+        // In the case that it has made it through the entire array without being smaller than anything
+        if !hasBeenInserted {
+            sorted.append(vehicle)
+        }
+    }
     
-    //TODO: TMRW
 }

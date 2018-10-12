@@ -44,4 +44,11 @@ class Vehicle {
     // TODO: Function to make a marker.
     
     
+    
+    var distanceFromUser : CLLocationDistance {
+        //TODO: Fill in
+        return 0;
+    }
+    
+    
 }
