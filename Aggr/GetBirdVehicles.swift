@@ -12,10 +12,12 @@ import CoreLocation
 func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
     // TODO: Bird Get Function
     // Set up the URL request
-    let todoEndpoint: String = "https://api.bird.co/bird/nearby?latitude=" + location.latitude + "&longitude=" + location.longitude + "&radius=" + range
+    var todoEndpoint: String = "https://api.bird.co/bird/nearby?latitude=" + String(location.latitude)
+        todoEndpoint = todoEndpoint + "&longitude=" + String(location.longitude) + "&radius=" + String(range)
     guard let url = URL(string: todoEndpoint) else {
         print("Error: cannot create URL")
-        return nil
+        let empty = [Vehicle]()
+        return empty
     }
     let urlRequest = URLRequest(url: url)
     
@@ -62,5 +64,6 @@ func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location:
         }
     }
     task.resume()
+    return [Vehicle]()
 }
 
