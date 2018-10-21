@@ -1,818 +1,827 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 50;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */; };
-        37151A47CA3D12B8B2FDBA01 /* Pods_Aggr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58637A15E22ECCBA59DAB60 /* Pods_Aggr.framework */; };
-        38224C21B6413F755FB8F244 /* Pods_AggrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */; };
-        9D5E0DFEEC0EC3E77C55A37C /* Pods_AggrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */; };
-        C3024A47214894590075928B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A46214894590075928B /* AppDelegate.swift */; };
-        C3024A49214894590075928B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A48214894590075928B /* ViewController.swift */; };
-        C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3024A4D214894590075928B /* Aggr.xcdatamodeld */; };
-        C3024A512148945B0075928B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3024A502148945B0075928B /* Assets.xcassets */; };
-        C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
-        C3024A5F2148945B0075928B /* AggrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A5E2148945B0075928B /* AggrTests.swift */; };
-        C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A692148945B0075928B /* AggrUITests.swift */; };
-        C34AA2102162DA0500453B0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AA20F2162DA0500453B0F /* Constants.swift */; };
-        C34AA2112162DA0500453B0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AA20F2162DA0500453B0F /* Constants.swift */; };
-        C34AA2122162DA0500453B0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AA20F2162DA0500453B0F /* Constants.swift */; };
-        C35C536F2165B58700FBD032 /* GetAllVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C536E2165B58700FBD032 /* GetAllVehicles.swift */; };
-        C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C536E2165B58700FBD032 /* GetAllVehicles.swift */; };
-        C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C536E2165B58700FBD032 /* GetAllVehicles.swift */; };
-        C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
-        C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
-        C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
-        C35F6E17215C293C00F01F13 /* VehicleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E16215C293C00F01F13 /* VehicleCardView.swift */; };
-        C35F6E18215C293C00F01F13 /* VehicleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E16215C293C00F01F13 /* VehicleCardView.swift */; };
-        C35F6E19215C293C00F01F13 /* VehicleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E16215C293C00F01F13 /* VehicleCardView.swift */; };
-        C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
-        C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
-        C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
-        C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
-        C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
-        C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
-        C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
-        C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
-        C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
-        C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
-        C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
-        C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
-        C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
-        C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
-        C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
-        C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
-        C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
-        C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
-        C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
-        C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
-        C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
-        C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
-        C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
-        C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
+		21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */; };
+		37151A47CA3D12B8B2FDBA01 /* Pods_Aggr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58637A15E22ECCBA59DAB60 /* Pods_Aggr.framework */; };
+		38224C21B6413F755FB8F244 /* Pods_AggrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */; };
+		9D5E0DFEEC0EC3E77C55A37C /* Pods_AggrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */; };
+		C3024A47214894590075928B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A46214894590075928B /* AppDelegate.swift */; };
+		C3024A49214894590075928B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A48214894590075928B /* ViewController.swift */; };
+		C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3024A4D214894590075928B /* Aggr.xcdatamodeld */; };
+		C3024A512148945B0075928B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3024A502148945B0075928B /* Assets.xcassets */; };
+		C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
+		C3024A5F2148945B0075928B /* AggrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A5E2148945B0075928B /* AggrTests.swift */; };
+		C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A692148945B0075928B /* AggrUITests.swift */; };
+		C323E395217D32CF00015C6F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323E394217D32CF00015C6F /* Constants.swift */; };
+		C35C536F2165B58700FBD032 /* GetAllVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C536E2165B58700FBD032 /* GetAllVehicles.swift */; };
+		C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C536E2165B58700FBD032 /* GetAllVehicles.swift */; };
+		C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C536E2165B58700FBD032 /* GetAllVehicles.swift */; };
+		C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
+		C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
+		C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */; };
+		C35F6E17215C293C00F01F13 /* VehicleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E16215C293C00F01F13 /* VehicleCardView.swift */; };
+		C35F6E18215C293C00F01F13 /* VehicleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E16215C293C00F01F13 /* VehicleCardView.swift */; };
+		C35F6E19215C293C00F01F13 /* VehicleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F6E16215C293C00F01F13 /* VehicleCardView.swift */; };
+		C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
+		C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
+		C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942985214ADC7A00AEB1E1 /* Vehicle.swift */; };
+		C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
+		C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
+		C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942989214ADE4C00AEB1E1 /* Company.swift */; };
+		C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
+		C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
+		C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
+		C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
+		C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
+		C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
+		C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
+		C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
+		C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
+		C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
+		C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
+		C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
+		C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
+		C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
+		C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
+		C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
+		C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
+		C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        C3024A5B2148945B0075928B /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = C3024A3B214894590075928B /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = C3024A42214894590075928B;
-            remoteInfo = Aggr;
-        };
-        C3024A662148945B0075928B /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = C3024A3B214894590075928B /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = C3024A42214894590075928B;
-            remoteInfo = Aggr;
-        };
+		C3024A5B2148945B0075928B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3024A3B214894590075928B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3024A42214894590075928B;
+			remoteInfo = Aggr;
+		};
+		C3024A662148945B0075928B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3024A3B214894590075928B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3024A42214894590075928B;
+			remoteInfo = Aggr;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-        05C7DAAE7CBB72E87F9AF547 /* Pods-Aggr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aggr/Pods-Aggr.debug.xcconfig"; sourceTree = "<group>"; };
-        0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBirdVehicles.swift; sourceTree = "<group>"; };
-        64443E80E71EDBC68C8255BC /* Pods-AggrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AggrTests/Pods-AggrTests.release.xcconfig"; sourceTree = "<group>"; };
-        682E63B565C50EBCCC36A61C /* Pods-AggrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AggrUITests/Pods-AggrUITests.debug.xcconfig"; sourceTree = "<group>"; };
-        C3024A43214894590075928B /* Aggr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aggr.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        C3024A46214894590075928B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        C3024A48214894590075928B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-        C3024A4E214894590075928B /* Aggr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aggr.xcdatamodel; sourceTree = "<group>"; };
-        C3024A502148945B0075928B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        C3024A532148945B0075928B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        C3024A552148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        C3024A5A2148945B0075928B /* AggrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        C3024A5E2148945B0075928B /* AggrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrTests.swift; sourceTree = "<group>"; };
-        C3024A602148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        C3024A652148945B0075928B /* AggrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        C3024A692148945B0075928B /* AggrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrUITests.swift; sourceTree = "<group>"; };
-        C3024A6B2148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        C34AA20F2162DA0500453B0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-        C35C536E2165B58700FBD032 /* GetAllVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllVehicles.swift; sourceTree = "<group>"; };
-        C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndImageHandling.swift; sourceTree = "<group>"; };
-        C35F6E16215C293C00F01F13 /* VehicleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCardView.swift; sourceTree = "<group>"; };
-        C3942985214ADC7A00AEB1E1 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-        C3942989214ADE4C00AEB1E1 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-        C394298D214ADEC500AEB1E1 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
-        C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOfoVehicles.swift; sourceTree = "<group>"; };
-        C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLimeBikeVehicles.swift; sourceTree = "<group>"; };
-        C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBirdVehicles.swift; sourceTree = "<group>"; };
-        C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterData.swift; sourceTree = "<group>"; };
-        C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMarker.swift; sourceTree = "<group>"; };
-        D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aggr/Pods-Aggr.release.xcconfig"; sourceTree = "<group>"; };
-        E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AggrTests/Pods-AggrTests.debug.xcconfig"; sourceTree = "<group>"; };
-        E58637A15E22ECCBA59DAB60 /* Pods_Aggr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aggr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        E874B82CEA9C3B1879E91194 /* Pods-AggrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AggrUITests/Pods-AggrUITests.release.xcconfig"; sourceTree = "<group>"; };
+		05C7DAAE7CBB72E87F9AF547 /* Pods-Aggr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aggr/Pods-Aggr.debug.xcconfig"; sourceTree = "<group>"; };
+		0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupBirdVehicles.swift; sourceTree = "<group>"; };
+		64443E80E71EDBC68C8255BC /* Pods-AggrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AggrTests/Pods-AggrTests.release.xcconfig"; sourceTree = "<group>"; };
+		682E63B565C50EBCCC36A61C /* Pods-AggrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AggrUITests/Pods-AggrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C3024A43214894590075928B /* Aggr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aggr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3024A46214894590075928B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3024A48214894590075928B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3024A4E214894590075928B /* Aggr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aggr.xcdatamodel; sourceTree = "<group>"; };
+		C3024A502148945B0075928B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3024A532148945B0075928B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3024A552148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3024A5A2148945B0075928B /* AggrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3024A5E2148945B0075928B /* AggrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrTests.swift; sourceTree = "<group>"; };
+		C3024A602148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3024A652148945B0075928B /* AggrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3024A692148945B0075928B /* AggrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrUITests.swift; sourceTree = "<group>"; };
+		C3024A6B2148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C323E394217D32CF00015C6F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C34AA20F2162DA0500453B0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C35C536E2165B58700FBD032 /* GetAllVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllVehicles.swift; sourceTree = "<group>"; };
+		C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndImageHandling.swift; sourceTree = "<group>"; };
+		C35F6E16215C293C00F01F13 /* VehicleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCardView.swift; sourceTree = "<group>"; };
+		C3942985214ADC7A00AEB1E1 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		C3942989214ADE4C00AEB1E1 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		C394298D214ADEC500AEB1E1 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
+		C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOfoVehicles.swift; sourceTree = "<group>"; };
+		C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLimeBikeVehicles.swift; sourceTree = "<group>"; };
+		C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBirdVehicles.swift; sourceTree = "<group>"; };
+		C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterData.swift; sourceTree = "<group>"; };
+		C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMarker.swift; sourceTree = "<group>"; };
+		D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aggr/Pods-Aggr.release.xcconfig"; sourceTree = "<group>"; };
+		E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AggrTests/Pods-AggrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E58637A15E22ECCBA59DAB60 /* Pods_Aggr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aggr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E874B82CEA9C3B1879E91194 /* Pods-AggrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AggrUITests/Pods-AggrUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        C3024A40214894590075928B /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                37151A47CA3D12B8B2FDBA01 /* Pods_Aggr.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        C3024A572148945B0075928B /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                38224C21B6413F755FB8F244 /* Pods_AggrTests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        C3024A622148945B0075928B /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                9D5E0DFEEC0EC3E77C55A37C /* Pods_AggrUITests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		C3024A40214894590075928B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37151A47CA3D12B8B2FDBA01 /* Pods_Aggr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3024A572148945B0075928B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38224C21B6413F755FB8F244 /* Pods_AggrTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3024A622148945B0075928B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D5E0DFEEC0EC3E77C55A37C /* Pods_AggrUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        017F81DCAD289C53E21BAFAA /* Frameworks */ = {
-            isa = PBXGroup;
-            children = (
-                E58637A15E22ECCBA59DAB60 /* Pods_Aggr.framework */,
-                0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */,
-                D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */,
-            );
-            name = Frameworks;
-            sourceTree = "<group>";
-        };
-        C3024A3A214894590075928B = {
-            isa = PBXGroup;
-            children = (
-                C3024A45214894590075928B /* Aggr */,
-                C3024A5D2148945B0075928B /* AggrTests */,
-                C3024A682148945B0075928B /* AggrUITests */,
-                C3024A44214894590075928B /* Products */,
-                C4EB74DD753B63E72BB3084D /* Pods */,
-                017F81DCAD289C53E21BAFAA /* Frameworks */,
-            );
-            sourceTree = "<group>";
-        };
-        C3024A44214894590075928B /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                C3024A43214894590075928B /* Aggr.app */,
-                C3024A5A2148945B0075928B /* AggrTests.xctest */,
-                C3024A652148945B0075928B /* AggrUITests.xctest */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        C3024A45214894590075928B /* Aggr */ = {
-            isa = PBXGroup;
-            children = (
-                C3024A46214894590075928B /* AppDelegate.swift */,
-                C3942985214ADC7A00AEB1E1 /* Vehicle.swift */,
-                C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */,
-                C35F6E16215C293C00F01F13 /* VehicleCardView.swift */,
-                C35C536E2165B58700FBD032 /* GetAllVehicles.swift */,
-                C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */,
-                C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */,
-                C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */,
-                C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */,
-                C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */,
-                C394298D214ADEC500AEB1E1 /* VehicleType.swift */,
-                C3942989214ADE4C00AEB1E1 /* Company.swift */,
-                C3024A48214894590075928B /* ViewController.swift */,
-                C3024A502148945B0075928B /* Assets.xcassets */,
-                C3024A522148945B0075928B /* LaunchScreen.storyboard */,
-                C3024A552148945B0075928B /* Info.plist */,
-                C3024A4D214894590075928B /* Aggr.xcdatamodeld */,
-                21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */,
-            );
-            path = Aggr;
-            sourceTree = "<group>";
-        };
-        C3024A5D2148945B0075928B /* AggrTests */ = {
-            isa = PBXGroup;
-            children = (
-                C3024A5E2148945B0075928B /* AggrTests.swift */,
-                C3024A602148945B0075928B /* Info.plist */,
-            );
-            path = AggrTests;
-            sourceTree = "<group>";
-        };
-        C3024A682148945B0075928B /* AggrUITests */ = {
-            isa = PBXGroup;
-            children = (
-                C3024A692148945B0075928B /* AggrUITests.swift */,
-                C3024A6B2148945B0075928B /* Info.plist */,
-            );
-            path = AggrUITests;
-            sourceTree = "<group>";
-        };
-        C4EB74DD753B63E72BB3084D /* Pods */ = {
-            isa = PBXGroup;
-            children = (
-                05C7DAAE7CBB72E87F9AF547 /* Pods-Aggr.debug.xcconfig */,
-                D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */,
-                E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */,
-                64443E80E71EDBC68C8255BC /* Pods-AggrTests.release.xcconfig */,
-                682E63B565C50EBCCC36A61C /* Pods-AggrUITests.debug.xcconfig */,
-                E874B82CEA9C3B1879E91194 /* Pods-AggrUITests.release.xcconfig */,
-            );
-            name = Pods;
-            sourceTree = "<group>";
-        };
+		017F81DCAD289C53E21BAFAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E58637A15E22ECCBA59DAB60 /* Pods_Aggr.framework */,
+				0BE6F8D00221BF65754AE38A /* Pods_AggrTests.framework */,
+				D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3024A3A214894590075928B = {
+			isa = PBXGroup;
+			children = (
+				C3024A45214894590075928B /* Aggr */,
+				C3024A5D2148945B0075928B /* AggrTests */,
+				C3024A682148945B0075928B /* AggrUITests */,
+				C3024A44214894590075928B /* Products */,
+				C4EB74DD753B63E72BB3084D /* Pods */,
+				017F81DCAD289C53E21BAFAA /* Frameworks */,
+				C323E393217D2CDB00015C6F /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		C3024A44214894590075928B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3024A43214894590075928B /* Aggr.app */,
+				C3024A5A2148945B0075928B /* AggrTests.xctest */,
+				C3024A652148945B0075928B /* AggrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3024A45214894590075928B /* Aggr */ = {
+			isa = PBXGroup;
+			children = (
+				C323E394217D32CF00015C6F /* Constants.swift */,
+				C3024A46214894590075928B /* AppDelegate.swift */,
+				C3942985214ADC7A00AEB1E1 /* Vehicle.swift */,
+				C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */,
+				C35F6E16215C293C00F01F13 /* VehicleCardView.swift */,
+				C35C536E2165B58700FBD032 /* GetAllVehicles.swift */,
+				C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */,
+				C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */,
+				C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */,
+				C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */,
+				C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */,
+				C394298D214ADEC500AEB1E1 /* VehicleType.swift */,
+				C3942989214ADE4C00AEB1E1 /* Company.swift */,
+				C3024A48214894590075928B /* ViewController.swift */,
+				C3024A502148945B0075928B /* Assets.xcassets */,
+				C3024A522148945B0075928B /* LaunchScreen.storyboard */,
+				C3024A552148945B0075928B /* Info.plist */,
+				C3024A4D214894590075928B /* Aggr.xcdatamodeld */,
+				21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */,
+			);
+			path = Aggr;
+			sourceTree = "<group>";
+		};
+		C3024A5D2148945B0075928B /* AggrTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3024A5E2148945B0075928B /* AggrTests.swift */,
+				C3024A602148945B0075928B /* Info.plist */,
+			);
+			path = AggrTests;
+			sourceTree = "<group>";
+		};
+		C3024A682148945B0075928B /* AggrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3024A692148945B0075928B /* AggrUITests.swift */,
+				C3024A6B2148945B0075928B /* Info.plist */,
+			);
+			path = AggrUITests;
+			sourceTree = "<group>";
+		};
+		C323E393217D2CDB00015C6F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C34AA20F2162DA0500453B0F /* Constants.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		C4EB74DD753B63E72BB3084D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05C7DAAE7CBB72E87F9AF547 /* Pods-Aggr.debug.xcconfig */,
+				D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */,
+				E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */,
+				64443E80E71EDBC68C8255BC /* Pods-AggrTests.release.xcconfig */,
+				682E63B565C50EBCCC36A61C /* Pods-AggrUITests.debug.xcconfig */,
+				E874B82CEA9C3B1879E91194 /* Pods-AggrUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        C3024A42214894590075928B /* Aggr */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = C3024A6E2148945B0075928B /* Build configuration list for PBXNativeTarget "Aggr" */;
-            buildPhases = (
-                40E3570C81A7E061A61BE2E0 /* [CP] Check Pods Manifest.lock */,
-                C3024A3F214894590075928B /* Sources */,
-                C3024A40214894590075928B /* Frameworks */,
-                C3024A41214894590075928B /* Resources */,
-                7E9B5CCC229227F558EBFCCB /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = Aggr;
-            productName = Aggr;
-            productReference = C3024A43214894590075928B /* Aggr.app */;
-            productType = "com.apple.product-type.application";
-        };
-        C3024A592148945B0075928B /* AggrTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = C3024A712148945B0075928B /* Build configuration list for PBXNativeTarget "AggrTests" */;
-            buildPhases = (
-                2A6EF1A93FDF5CA7FD823F20 /* [CP] Check Pods Manifest.lock */,
-                C3024A562148945B0075928B /* Sources */,
-                C3024A572148945B0075928B /* Frameworks */,
-                C3024A582148945B0075928B /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                C3024A5C2148945B0075928B /* PBXTargetDependency */,
-            );
-            name = AggrTests;
-            productName = AggrTests;
-            productReference = C3024A5A2148945B0075928B /* AggrTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        C3024A642148945B0075928B /* AggrUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = C3024A742148945B0075928B /* Build configuration list for PBXNativeTarget "AggrUITests" */;
-            buildPhases = (
-                85519AC701268AED25FA7207 /* [CP] Check Pods Manifest.lock */,
-                C3024A612148945B0075928B /* Sources */,
-                C3024A622148945B0075928B /* Frameworks */,
-                C3024A632148945B0075928B /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                C3024A672148945B0075928B /* PBXTargetDependency */,
-            );
-            name = AggrUITests;
-            productName = AggrUITests;
-            productReference = C3024A652148945B0075928B /* AggrUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
+		C3024A42214894590075928B /* Aggr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3024A6E2148945B0075928B /* Build configuration list for PBXNativeTarget "Aggr" */;
+			buildPhases = (
+				40E3570C81A7E061A61BE2E0 /* [CP] Check Pods Manifest.lock */,
+				C3024A3F214894590075928B /* Sources */,
+				C3024A40214894590075928B /* Frameworks */,
+				C3024A41214894590075928B /* Resources */,
+				7E9B5CCC229227F558EBFCCB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aggr;
+			productName = Aggr;
+			productReference = C3024A43214894590075928B /* Aggr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3024A592148945B0075928B /* AggrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3024A712148945B0075928B /* Build configuration list for PBXNativeTarget "AggrTests" */;
+			buildPhases = (
+				2A6EF1A93FDF5CA7FD823F20 /* [CP] Check Pods Manifest.lock */,
+				C3024A562148945B0075928B /* Sources */,
+				C3024A572148945B0075928B /* Frameworks */,
+				C3024A582148945B0075928B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3024A5C2148945B0075928B /* PBXTargetDependency */,
+			);
+			name = AggrTests;
+			productName = AggrTests;
+			productReference = C3024A5A2148945B0075928B /* AggrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3024A642148945B0075928B /* AggrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3024A742148945B0075928B /* Build configuration list for PBXNativeTarget "AggrUITests" */;
+			buildPhases = (
+				85519AC701268AED25FA7207 /* [CP] Check Pods Manifest.lock */,
+				C3024A612148945B0075928B /* Sources */,
+				C3024A622148945B0075928B /* Frameworks */,
+				C3024A632148945B0075928B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3024A672148945B0075928B /* PBXTargetDependency */,
+			);
+			name = AggrUITests;
+			productName = AggrUITests;
+			productReference = C3024A652148945B0075928B /* AggrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        C3024A3B214894590075928B /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 0940;
-                LastUpgradeCheck = 0940;
-                ORGANIZATIONNAME = AggrCo;
-                TargetAttributes = {
-                    C3024A42214894590075928B = {
-                        CreatedOnToolsVersion = 9.4.1;
-                    };
-                    C3024A592148945B0075928B = {
-                        CreatedOnToolsVersion = 9.4.1;
-                        TestTargetID = C3024A42214894590075928B;
-                    };
-                    C3024A642148945B0075928B = {
-                        CreatedOnToolsVersion = 9.4.1;
-                        TestTargetID = C3024A42214894590075928B;
-                    };
-                };
-            };
-            buildConfigurationList = C3024A3E214894590075928B /* Build configuration list for PBXProject "Aggr" */;
-            compatibilityVersion = "Xcode 9.3";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = C3024A3A214894590075928B;
-            productRefGroup = C3024A44214894590075928B /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                C3024A42214894590075928B /* Aggr */,
-                C3024A592148945B0075928B /* AggrTests */,
-                C3024A642148945B0075928B /* AggrUITests */,
-            );
-        };
+		C3024A3B214894590075928B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = AggrCo;
+				TargetAttributes = {
+					C3024A42214894590075928B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					C3024A592148945B0075928B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C3024A42214894590075928B;
+					};
+					C3024A642148945B0075928B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C3024A42214894590075928B;
+					};
+				};
+			};
+			buildConfigurationList = C3024A3E214894590075928B /* Build configuration list for PBXProject "Aggr" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3024A3A214894590075928B;
+			productRefGroup = C3024A44214894590075928B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3024A42214894590075928B /* Aggr */,
+				C3024A592148945B0075928B /* AggrTests */,
+				C3024A642148945B0075928B /* AggrUITests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        C3024A41214894590075928B /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */,
-                C3024A512148945B0075928B /* Assets.xcassets in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        C3024A582148945B0075928B /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        C3024A632148945B0075928B /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		C3024A41214894590075928B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */,
+				C3024A512148945B0075928B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3024A582148945B0075928B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3024A632148945B0075928B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        2A6EF1A93FDF5CA7FD823F20 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-AggrTests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        40E3570C81A7E061A61BE2E0 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-Aggr-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        7E9B5CCC229227F558EBFCCB /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-resources.sh",
-                "${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-                "${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-                "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        85519AC701268AED25FA7207 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-AggrUITests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
+		2A6EF1A93FDF5CA7FD823F20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AggrTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40E3570C81A7E061A61BE2E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aggr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E9B5CCC229227F558EBFCCB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85519AC701268AED25FA7207 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AggrUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        C3024A3F214894590075928B /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
-                C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
-                C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
-                C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
-                C35F6E17215C293C00F01F13 /* VehicleCardView.swift in Sources */,
-                C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */,
-                C3024A49214894590075928B /* ViewController.swift in Sources */,
-                C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
-                C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */,
-                C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
-                C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
-                C34AA2102162DA0500453B0F /* Constants.swift in Sources */,
-                C35C536F2165B58700FBD032 /* GetAllVehicles.swift in Sources */,
-                C3024A47214894590075928B /* AppDelegate.swift in Sources */,
-                C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
-                21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        C3024A562148945B0075928B /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
-                C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
-                C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
-                C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
-                C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
-                C35F6E18215C293C00F01F13 /* VehicleCardView.swift in Sources */,
-                C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
-                C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */,
-                C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
-                C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
-                C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */,
-                C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        C3024A612148945B0075928B /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
-                C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
-                C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
-                C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
-                C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
-                C35F6E19215C293C00F01F13 /* VehicleCardView.swift in Sources */,
-                C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
-                C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */,
-                C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
-                C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
-                C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */,
-                C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		C3024A3F214894590075928B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
+				C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
+				C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
+				C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
+				C35F6E17215C293C00F01F13 /* VehicleCardView.swift in Sources */,
+				C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */,
+				C3024A49214894590075928B /* ViewController.swift in Sources */,
+				C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
+				C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */,
+				C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
+				C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
+				C35C536F2165B58700FBD032 /* GetAllVehicles.swift in Sources */,
+				C3024A47214894590075928B /* AppDelegate.swift in Sources */,
+				C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
+				C323E395217D32CF00015C6F /* Constants.swift in Sources */,
+				21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3024A562148945B0075928B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
+				C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
+				C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
+				C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
+				C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
+				C35F6E18215C293C00F01F13 /* VehicleCardView.swift in Sources */,
+				C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
+				C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */,
+				C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
+				C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
+				C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */,
+				C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3024A612148945B0075928B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
+				C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
+				C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
+				C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
+				C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
+				C35F6E19215C293C00F01F13 /* VehicleCardView.swift in Sources */,
+				C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
+				C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */,
+				C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
+				C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
+				C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */,
+				C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        C3024A5C2148945B0075928B /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = C3024A42214894590075928B /* Aggr */;
-            targetProxy = C3024A5B2148945B0075928B /* PBXContainerItemProxy */;
-        };
-        C3024A672148945B0075928B /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = C3024A42214894590075928B /* Aggr */;
-            targetProxy = C3024A662148945B0075928B /* PBXContainerItemProxy */;
-        };
+		C3024A5C2148945B0075928B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3024A42214894590075928B /* Aggr */;
+			targetProxy = C3024A5B2148945B0075928B /* PBXContainerItemProxy */;
+		};
+		C3024A672148945B0075928B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3024A42214894590075928B /* Aggr */;
+			targetProxy = C3024A662148945B0075928B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        C3024A522148945B0075928B /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                C3024A532148945B0075928B /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		C3024A522148945B0075928B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3024A532148945B0075928B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        C3024A6C2148945B0075928B /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        C3024A6D2148945B0075928B /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                SWIFT_COMPILATION_MODE = wholemodule;
-                SWIFT_OPTIMIZATION_LEVEL = "-O";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        C3024A6F2148945B0075928B /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 05C7DAAE7CBB72E87F9AF547 /* Pods-Aggr.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 6C36JF2QBJ;
-                INFOPLIST_FILE = Aggr/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.Aggr;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        C3024A702148945B0075928B /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 6C36JF2QBJ;
-                INFOPLIST_FILE = Aggr/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.Aggr;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
-        C3024A722148945B0075928B /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 6C36JF2QBJ;
-                INFOPLIST_FILE = AggrTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aggr.app/Aggr";
-            };
-            name = Debug;
-        };
-        C3024A732148945B0075928B /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 64443E80E71EDBC68C8255BC /* Pods-AggrTests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 6C36JF2QBJ;
-                INFOPLIST_FILE = AggrTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aggr.app/Aggr";
-            };
-            name = Release;
-        };
-        C3024A752148945B0075928B /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 682E63B565C50EBCCC36A61C /* Pods-AggrUITests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 6C36JF2QBJ;
-                INFOPLIST_FILE = AggrUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = Aggr;
-            };
-            name = Debug;
-        };
-        C3024A762148945B0075928B /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = E874B82CEA9C3B1879E91194 /* Pods-AggrUITests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 6C36JF2QBJ;
-                INFOPLIST_FILE = AggrUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = Aggr;
-            };
-            name = Release;
-        };
+		C3024A6C2148945B0075928B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C3024A6D2148945B0075928B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3024A6F2148945B0075928B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05C7DAAE7CBB72E87F9AF547 /* Pods-Aggr.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				INFOPLIST_FILE = Aggr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.Aggr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3024A702148945B0075928B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				INFOPLIST_FILE = Aggr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.Aggr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3024A722148945B0075928B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				INFOPLIST_FILE = AggrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aggr.app/Aggr";
+			};
+			name = Debug;
+		};
+		C3024A732148945B0075928B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64443E80E71EDBC68C8255BC /* Pods-AggrTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				INFOPLIST_FILE = AggrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aggr.app/Aggr";
+			};
+			name = Release;
+		};
+		C3024A752148945B0075928B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 682E63B565C50EBCCC36A61C /* Pods-AggrUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				INFOPLIST_FILE = AggrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Aggr;
+			};
+			name = Debug;
+		};
+		C3024A762148945B0075928B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E874B82CEA9C3B1879E91194 /* Pods-AggrUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				INFOPLIST_FILE = AggrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = micahbyrnewolfsohn.AggrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Aggr;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        C3024A3E214894590075928B /* Build configuration list for PBXProject "Aggr" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                C3024A6C2148945B0075928B /* Debug */,
-                C3024A6D2148945B0075928B /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        C3024A6E2148945B0075928B /* Build configuration list for PBXNativeTarget "Aggr" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                C3024A6F2148945B0075928B /* Debug */,
-                C3024A702148945B0075928B /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        C3024A712148945B0075928B /* Build configuration list for PBXNativeTarget "AggrTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                C3024A722148945B0075928B /* Debug */,
-                C3024A732148945B0075928B /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        C3024A742148945B0075928B /* Build configuration list for PBXNativeTarget "AggrUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                C3024A752148945B0075928B /* Debug */,
-                C3024A762148945B0075928B /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		C3024A3E214894590075928B /* Build configuration list for PBXProject "Aggr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3024A6C2148945B0075928B /* Debug */,
+				C3024A6D2148945B0075928B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3024A6E2148945B0075928B /* Build configuration list for PBXNativeTarget "Aggr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3024A6F2148945B0075928B /* Debug */,
+				C3024A702148945B0075928B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3024A712148945B0075928B /* Build configuration list for PBXNativeTarget "AggrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3024A722148945B0075928B /* Debug */,
+				C3024A732148945B0075928B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3024A742148945B0075928B /* Build configuration list for PBXNativeTarget "AggrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3024A752148945B0075928B /* Debug */,
+				C3024A762148945B0075928B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-        C3024A4D214894590075928B /* Aggr.xcdatamodeld */ = {
-            isa = XCVersionGroup;
-            children = (
-                C3024A4E214894590075928B /* Aggr.xcdatamodel */,
-            );
-            currentVersion = C3024A4E214894590075928B /* Aggr.xcdatamodel */;
-            path = Aggr.xcdatamodeld;
-            sourceTree = "<group>";
-            versionGroupType = wrapper.xcdatamodel;
-        };
+		C3024A4D214894590075928B /* Aggr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3024A4E214894590075928B /* Aggr.xcdatamodel */,
+			);
+			currentVersion = C3024A4E214894590075928B /* Aggr.xcdatamodel */;
+			path = Aggr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 /* End XCVersionGroup section */
-    };
-    rootObject = C3024A3B214894590075928B /* Project object */;
+	};
+	rootObject = C3024A3B214894590075928B /* Project object */;
 }

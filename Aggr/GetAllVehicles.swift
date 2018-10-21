@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-
+/*
 func getAllVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
     
     var aggregateVehiclesList : [Vehicle]
@@ -31,7 +31,7 @@ func getAllVehicles(withinRange range: CLLocationDistance, ofLocation location: 
     
 }
 
-
+*/
 
 
 
@@ -42,7 +42,7 @@ func getAllVehicles(withinRange range: CLLocationDistance, ofLocation location: 
 /// - Parameter vehicles: An array of unsorted vehicles
 /// - Returns: An array of vehicles sorted from closest (first) to furthest
 func sortVehiclesByDistance(_ vehicles : [Vehicle]) -> [Vehicle] {
-    var sorted : [Vehicle]
+    var sorted : [Vehicle] = []
     //IDEA: Add boolean input value to determine the direction of sorting and traversal
     // Make certain that vehicles array is not empty
     if vehicles.count == 0 { return [] }
@@ -63,5 +63,7 @@ func sortVehiclesByDistance(_ vehicles : [Vehicle]) -> [Vehicle] {
             sorted.append(vehicle)
         }
     }
+    
+    return sorted
     
 }

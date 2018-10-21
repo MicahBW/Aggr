@@ -43,7 +43,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         
         // Combine the two views
         
-        var ve : Vehicle = Vehicle(location: CLLocationCoordinate2DMake(38.647202, -90.310471), owner: Company.bird, type: VehicleType.bike, scooterInfo: nil);
+        var ve : Vehicle = Vehicle(location: CLLocationCoordinate2DMake(38.647202, -90.310471), company: Company.bird, type: VehicleType.bike, scooterInfo: nil);
         
         var mark : VehicleMarker = VehicleMarker(forVehicle: ve)
         

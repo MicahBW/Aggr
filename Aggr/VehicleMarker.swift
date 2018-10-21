@@ -28,7 +28,7 @@ struct VehicleMarkerStyle {
     
     init (forVehicle vehicle: Vehicle) {
         icon = logoForVehicleType(vehicle.type)
-        color = colorForCompany(vehicle.owner)
+        color = colorForCompany(vehicle.company)
     }
 }
 
