@@ -15,7 +15,7 @@ import UIKit
 class Vehicle {
 
     var location: CLLocationCoordinate2D
-    var owner: Company
+    var company: Company
     var type: VehicleType
     var scooterInfo: ScooterData?
     
@@ -27,9 +27,9 @@ class Vehicle {
     ///   - owner: The owning company (i.e. limeBike or ofo)
     ///   - type: The type of vehicle that it is (i.e. bike or scooter)
     ///   - scooterInfo: An optional variable used to transfer scooter-exclusive data that does not apply to non-battery-operated vehicles such as bikes
-    init (location: CLLocationCoordinate2D, owner: Company, type: VehicleType, scooterInfo: ScooterData?) {
+    init (location: CLLocationCoordinate2D, company: Company, type: VehicleType, scooterInfo: ScooterData?) {
         self.location = location
-        self.owner = owner
+        self.company = company
         self.type = type
         self.scooterInfo = scooterInfo
     }
@@ -46,8 +46,8 @@ class Vehicle {
     
     
     var distanceFromUser : CLLocationDistance {
-        //TODO: Fill in
-        return 0;
+        var userloc = CLLocation()
+        return userloc.distance(from: location)
     }
     
     
