@@ -46,8 +46,8 @@ class Vehicle {
     
     
     var distanceFromUser : CLLocationDistance {
-        var userloc = CLLocation()
-        return userloc.distance(from: location)
+        let userloc = CLLocation()
+        return userloc.distance(from: CLLocation(latitude: location.latitude, longitude: location.longitude))
     }
     
     
