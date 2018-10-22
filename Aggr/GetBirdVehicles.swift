@@ -64,6 +64,19 @@ func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location:
         }
     }
     task.resume()
+
+    struct vehicleList: Decodable {
+        
+        let vehicles: [multiVehicle]
+    }
+    struct multiVehicle: Decodable {
+        let id: String
+        let type: String
+        let attributes: [String]
+        let lat: Float
+        let long: Float
+        
+    }
     return [Vehicle]()
 }
 
