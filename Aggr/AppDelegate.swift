@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         // MARK: GMServices providing keys
-        GMSServices.provideAPIKey("AIzaSyCeyTRCibAy4ax2biVBzO76yeQZWPA3ULw")
-        GMSPlacesClient.provideAPIKey("AIzaSyCeyTRCibAy4ax2biVBzO76yeQZWPA3ULw")
+        GMSServices.provideAPIKey(Constants.GMSHandling.APIKey)
+        GMSPlacesClient.provideAPIKey(Constants.GMSHandling.APIKey)
         
         // MARK: Handling controller
         let controller = ViewController()
