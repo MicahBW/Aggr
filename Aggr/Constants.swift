@@ -12,6 +12,13 @@ import CoreGraphics
 
 struct Constants {
     
+    
+    struct GMSHandling {
+        
+        public static let APIKey = "AIzaSyCeyTRCibAy4ax2biVBzO76yeQZWPA3ULw"
+        
+    }
+    
     struct ImageHandling {
         
         struct Markers {
