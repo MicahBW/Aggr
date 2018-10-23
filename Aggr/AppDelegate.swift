@@ -12,6 +12,7 @@ import CoreData
 // GOOGLE MAPS:
 import GoogleMaps
 import GooglePlaces
+import Apollo
 
 
 @UIApplicationMain
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
         
         
         // MARK: Replaces the Main.storyboard
@@ -41,10 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.setNavigationBarHidden(true, animated: true)
         
         
+        print("test")
         
+        
+        let lat: Double = 38.6488
+        let long: Double = 90.3108
+        let rnge: Double = 100.0
+        
+        let CLLD: Double = rnge
+        let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+        
+        
+        getBirdVehicles(withinRange: CLLD, ofLocation: CLLC2D)
+        
+        print("test2")
         
         // TODO: - Add setup here
-        
         
         return true
     }

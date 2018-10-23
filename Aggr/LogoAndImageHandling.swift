@@ -109,6 +109,8 @@ func logoForVehicleType(_ type: VehicleType) -> UIImage {
         returnImg = UIImage(named: "BikeMarker")!
     case VehicleType.scooter:
         returnImg = UIImage(named: "ScooterMarker")!
+    default:
+        returnImg = UIImage(named: "BikeMarker")!
     }
     
     return imageWithImage(image: returnImg, scaledToSize: Constants.ImageHandling.Markers.markerSize)

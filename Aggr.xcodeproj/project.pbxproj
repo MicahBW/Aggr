@@ -244,6 +244,7 @@
 			buildConfigurationList = C3024A6E2148945B0075928B /* Build configuration list for PBXNativeTarget "Aggr" */;
 			buildPhases = (
 				40E3570C81A7E061A61BE2E0 /* [CP] Check Pods Manifest.lock */,
+				215BCB62217EC06A00B69138 /* Generate Apollo GraphQL API */,
 				C3024A3F214894590075928B /* Sources */,
 				C3024A40214894590075928B /* Frameworks */,
 				C3024A41214894590075928B /* Resources */,
@@ -367,6 +368,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		215BCB62217EC06A00B69138 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
+		};
 		2A6EF1A93FDF5CA7FD823F20 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

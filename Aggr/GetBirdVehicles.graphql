@@ -1,0 +1,12 @@
+query GetAllVehicles($lat: Float!, $lng: Float!) {
+  vehicles (lat: $lat, lng: $lng) {
+    id
+    type
+    attributes
+    lat
+    lng
+    provider {
+      name
+    }
+  }
+}

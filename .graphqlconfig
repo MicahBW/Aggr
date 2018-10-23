@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "AggrQraphQL": {
+      "schemaPath": "*.graphql",
+      "extensions": {
+        "endpoints": {
+          "default": {
+            "url": "https://api.multicycles.org/v1?qvCTZwGeCTjrkI1TV1OgDUQPcsua03tV",
+            "subscription": "https://api.multicycles.org/v1?qvCTZwGeCTjrkI1TV1OgDUQPcsua03tV"
+          }
+        }
+      }
+    }
+  }
+}

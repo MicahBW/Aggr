@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum VehicleType {
+enum OtherVehicleType {
     case bike
     case scooter
 }
