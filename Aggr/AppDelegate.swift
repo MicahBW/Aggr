@@ -55,7 +55,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         getBirdVehicles(withinRange: CLLD, ofLocation: CLLC2D)
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            print(getVehList()[0].location)
+        }
         print("test2")
         
         // TODO: - Add setup here

@@ -10,6 +10,8 @@ import Foundation
 import CoreLocation
 import Apollo
 
+var vehList = [Vehicle]()
+
 public enum VehicleType: RawRepresentable, Equatable, Hashable, Apollo.JSONDecodable, Apollo.JSONEncodable {
     public typealias RawValue = String
     /// A bike, something with two wheel, a handlebar and a saddle
@@ -22,6 +24,8 @@ public enum VehicleType: RawRepresentable, Equatable, Hashable, Apollo.JSONDecod
     case station
     /// Auto generated constant for unknown enum values
     case __unknown(RawValue)
+    
+ 
     
     public init?(rawValue: RawValue) {
         switch rawValue {
@@ -403,17 +407,17 @@ func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location:
             let typeObject = VehicleType.bike
             let scooterInfoObject = ScooterData.init(batteryCharge: 100)
             let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject, scooterInfo: scooterInfoObject)
-            vehicles.append(currentVehicle)
-            print(currentVehicle.company)
-            print(currentVehicle.location)
-            print(currentVehicle.type)
+            vehList.append(currentVehicle)
         }
     }
-    print("RIGHT")
-    print(vehicles.capacity)
-    print("HERE")
-    print(vehicles.description)
-    return vehicles
+    
+        print("RIGHT")
+        print(vehicles.capacity)
+        print("HERE")
+        print(vehicles.description)
+        return vehicles
+    
+    
 
     
 //    struct vehicleList: Decodable {
@@ -433,3 +437,6 @@ func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location:
 //    return [Vehicle]()
 }
 
+func getVehList() -> [Vehicle] {
+    return vehList
+}

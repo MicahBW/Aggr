@@ -43,11 +43,20 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         
         // Combine the two views
         
-        let ve : Vehicle = Vehicle(location: CLLocationCoordinate2DMake(38.647202, -90.310471), company: Company.bird, type: VehicleType.bike, scooterInfo: nil);
+        //let ve : Vehicle = Vehicle(location: CLLocationCoordinate2DMake(38.647202, -90.310471), company: Company.bird, type: VehicleType.bike, scooterInfo: nil);
         
-        let mark : VehicleMarker = VehicleMarker(forVehicle: ve)
+       // let mark : VehicleMarker = VehicleMarker(forVehicle: ve)
         
-        mark.map = mapView
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            let vehList = getVehList()
+            for veh in vehList {
+                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                thisMark.map = mapView
+            }
+
+        }
+        
+        //mark.map = mapView
         
     
     }
