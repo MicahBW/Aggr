@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import AutoGraphQL
 
 func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D) -> [Vehicle] {
     // TODO: Bird Get Function
@@ -77,6 +78,19 @@ func getBirdVehicles(withinRange range: CLLocationDistance, ofLocation location:
         let long: Float
         
     }
+    let query = AutoGraphQL.Operation(type: .query, name: "GetBirdVehicles", fields:[
+        Object(
+            name: "vehicles",
+            arguments: ["lat" : 38.645502, "lng" : -90.314853],
+            fields: [
+                "id",
+                "type",
+                "attributes",
+                "lat",
+                "lng",
+                Object(name: "provider", fields: ["name"])
+            ])
+        ])
     return [Vehicle]()
 }
 

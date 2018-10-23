@@ -1,4 +1,11 @@
 PODS:
+  - Alamofire (4.7.3)
+  - AutoGraph (0.7.0):
+    - Alamofire (~> 4.7.3)
+    - Crust (~> 0.10.0)
+    - JSONValueRX (~> 4.2.0)
+  - Crust (0.10.1):
+    - JSONValueRX (~> 4.2.0)
   - GoogleMaps (2.4.0):
     - GoogleMaps/Maps (= 2.4.0)
   - GoogleMaps/Base (2.4.0)
@@ -6,20 +13,30 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.4.0):
     - GoogleMaps/Base (= 2.4.0)
+  - JSONValueRX (4.2.0)
 
 DEPENDENCIES:
+  - AutoGraph
   - GoogleMaps
   - GooglePlaces
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AutoGraph
+    - Crust
     - GoogleMaps
     - GooglePlaces
+    - JSONValueRX
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AutoGraph: 9a64776a902904246a21cc55ede3ce3b5375d8b1
+  Crust: e73a1eafa205b8eabcafab3cd750c3c48ab5e319
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
+  JSONValueRX: 385a8d96f8a8728d500e229a4c81dd44d680b890
 
-PODFILE CHECKSUM: 1998a6bf888f806e9bc6c613a0d723cff1258091
+PODFILE CHECKSUM: 099b9809f371fc36cc0b49fb337367d5dc28e1d2
 
 COCOAPODS: 1.5.3

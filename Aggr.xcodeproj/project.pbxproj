@@ -248,6 +248,7 @@
 				C3024A40214894590075928B /* Frameworks */,
 				C3024A41214894590075928B /* Resources */,
 				7E9B5CCC229227F558EBFCCB /* [CP] Copy Pods Resources */,
+				80971A74F455581C30073697 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -420,6 +421,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80971A74F455581C30073697 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AutoGraph/AutoGraphQL.framework",
+				"${BUILT_PRODUCTS_DIR}/Crust/Crust.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONValueRX/JSONValueRX.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoGraphQL.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Crust.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONValueRX.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aggr/Pods-Aggr-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		85519AC701268AED25FA7207 /* [CP] Check Pods Manifest.lock */ = {

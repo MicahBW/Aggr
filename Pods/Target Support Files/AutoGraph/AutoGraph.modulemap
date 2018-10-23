@@ -1,0 +1,6 @@
+framework module AutoGraphQL {
+  umbrella header "AutoGraph-umbrella.h"
+
+  export *
+  module * { export * }
+}
