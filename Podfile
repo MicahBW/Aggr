@@ -9,6 +9,7 @@ target 'Aggr' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'AutoGraph'
+  pod 'Apollo'
 
   target 'AggrTests' do
     inherit! :search_paths
