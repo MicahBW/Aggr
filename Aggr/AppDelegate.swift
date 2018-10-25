@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey(Constants.GMSHandling.APIKey)
         
         // MARK: Handling controller
-        let controller = ViewController()
+        let controller = MapViewController()
         let navigationController = UINavigationController(rootViewController: controller)
         window?.rootViewController = navigationController
         

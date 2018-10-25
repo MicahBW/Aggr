@@ -8,9 +8,16 @@
 
 import Foundation
 import CoreGraphics
+import UIKit
 
 
 struct Constants {
+    
+    
+    
+    struct UIColorCollection {
+        public static let shyMoment = UIColor(red: 162, green: 155, blue: 254, alpha: 1.0);
+    }
     
     
     struct GMSHandling {
