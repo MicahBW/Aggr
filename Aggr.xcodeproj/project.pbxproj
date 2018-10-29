@@ -38,15 +38,6 @@
 		C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
 		C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
 		C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394298D214ADEC500AEB1E1 /* VehicleType.swift */; };
-		C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
-		C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
-		C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */; };
-		C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
-		C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
-		C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */; };
-		C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
-		C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
-		C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */; };
 		C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
 		C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
 		C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */; };
@@ -112,9 +103,6 @@
 		C3942985214ADC7A00AEB1E1 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		C3942989214ADE4C00AEB1E1 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		C394298D214ADEC500AEB1E1 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
-		C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOfoVehicles.swift; sourceTree = "<group>"; };
-		C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLimeBikeVehicles.swift; sourceTree = "<group>"; };
-		C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBirdVehicles.swift; sourceTree = "<group>"; };
 		C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterData.swift; sourceTree = "<group>"; };
 		C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMarker.swift; sourceTree = "<group>"; };
 		C3FD6B102182454600AB8665 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -206,9 +194,6 @@
 				C35C536E2165B58700FBD032 /* GetAllVehicles.swift */,
 				C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */,
 				C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */,
-				C3942991214AE22300AEB1E1 /* GetOfoVehicles.swift */,
-				C3942995214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift */,
-				C3942999214AE50000AEB1E1 /* GetBirdVehicles.swift */,
 				C394298D214ADEC500AEB1E1 /* VehicleType.swift */,
 				C3942989214ADE4C00AEB1E1 /* Company.swift */,
 				C3024A502148945B0075928B /* Assets.xcassets */,
@@ -527,14 +512,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3942992214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
 				C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
-				C3942996214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
 				C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C32EF2B7217FC23A00B9F515 /* VehicleCollectionCell.swift in Sources */,
 				C35F6E17215C293C00F01F13 /* VehicleCardView.swift in Sources */,
 				C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */,
-				C394299A214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
 				C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */,
 				C3FD6B1A2182469800AB8665 /* BottomSheetCollectionViewController.swift in Sources */,
 				C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
@@ -556,14 +538,11 @@
 				C3FD6B1B2182469800AB8665 /* BottomSheetCollectionViewController.swift in Sources */,
 				C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
 				C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
-				C3942997214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
-				C394299B214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
 				C35F6E18215C293C00F01F13 /* VehicleCardView.swift in Sources */,
 				C3FD6B132182454600AB8665 /* MapViewController.swift in Sources */,
 				C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
 				C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */,
 				C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
-				C3942993214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
 				C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 			);
@@ -577,14 +556,11 @@
 				C3FD6B1C2182469800AB8665 /* BottomSheetCollectionViewController.swift in Sources */,
 				C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
 				C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
-				C3942998214AE3F500AEB1E1 /* GetLimeBikeVehicles.swift in Sources */,
-				C394299C214AE50000AEB1E1 /* GetBirdVehicles.swift in Sources */,
 				C35F6E19215C293C00F01F13 /* VehicleCardView.swift in Sources */,
 				C3FD6B142182454600AB8665 /* MapViewController.swift in Sources */,
 				C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
 				C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */,
 				C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
-				C3942994214AE22300AEB1E1 /* GetOfoVehicles.swift in Sources */,
 				C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 			);
@@ -737,7 +713,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				DEVELOPMENT_TEAM = 9B2KKVM937;
 				INFOPLIST_FILE = Aggr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -756,7 +732,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C36JF2QBJ;
+				DEVELOPMENT_TEAM = 9B2KKVM937;
 				INFOPLIST_FILE = Aggr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
