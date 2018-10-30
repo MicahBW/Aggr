@@ -46,15 +46,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("test")
         
         
-        let lat: Double = 38.6488
-        let long: Double = -90.3108
+        var lat: Double = 38.889421
+        var long: Double = -77.035975
         let rnge: Double = 100.0
         
         let CLLD: Double = rnge
-        let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+        var CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
         
+        print("START")
         
         makeAPICall(withinRange: CLLD, ofLocation: CLLC2D)
+                
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             //print(getVehList()[0].location)
         }
