@@ -13,7 +13,7 @@ import UIKit
 
 struct Constants {
     
-    
+    public static let distanceFromCenter = 0.0002
     
     struct UIColorCollection {
         public static let shyMoment = UIColor(red: 162, green: 155, blue: 254, alpha: 1.0);
@@ -52,8 +52,6 @@ struct Constants {
             default:
                 return false
             }
-            
-            
         }
     }
 }
