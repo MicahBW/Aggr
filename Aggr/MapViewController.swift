@@ -47,7 +47,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     public func addBottomSheetView() {
-        
+        /*
         // init bottomSheetVC
         let layout = UICollectionViewFlowLayout()
         let bottomSheetVC = BottomSheetCollectionViewController(collectionViewLayout: layout)
@@ -63,7 +63,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
  
         
-        
+        */
         /*
         let bottomVC = UIViewController()
         self.addChildViewController(bottomVC)
@@ -102,7 +102,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             let vehList = getVehList()
         for v in vehList {
             var str = ""
-            str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + String(v.distanceFromUser.inMiles)  +  " miles away" + "n" ;
+            str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + String(v.distanceFromUser.inMiles)  +  " miles away" + "\n" ;
             textList.append(str)
             print("HERE: ", textList)
             var totString = ""
@@ -114,9 +114,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             
             let box = UITextView(frame: CGRect(x: 0, y: 0, width:  self.view.frame.width, height:  self.view.frame.height / 4))
             box.text = totString
-            box.backgroundColor = .black
+            box.backgroundColor = .red
             
-            box.text = "asdfsfdfadssff"
+            //box.text = "asdfsfdfadssff"
             
             self.view.addSubview(box)
             
