@@ -47,8 +47,21 @@ class VehicleCollectionCell: UICollectionViewCell {
         makeBackGradGradient()
         
         positionLabels(forVehicleCollectionStatus: .down) //TODO: Change
+        
+        print("yup \n")
+        
+    }
     
- }
+    
+    public func configureForVehicle(_ vehicle: Vehicle) {
+        companyLabel.text = nameOfCompany(vehicle.company)
+        typeLabel.text = nameOfVehicleType(vehicle.type)
+        distanceLabel.text = "0.3mi"
+        setup()
+    }
+    
+    
+    
     
     
     

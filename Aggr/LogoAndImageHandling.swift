@@ -126,3 +126,31 @@ func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
     UIGraphicsEndImageContext()
     return newImage
 }
+
+
+
+
+func nameOfVehicleType(_ type: VehicleType) -> String {
+    switch type {
+    case VehicleType.bike:
+        return "Bike"
+    case VehicleType.scooter:
+        return "Scooter"
+    default:
+        return "Unknown"
+    }
+}
+
+
+func nameOfCompany(_ company: Company) -> String {
+    switch company {
+    case Company.bird:
+        return "Bird";
+    case Company.ofo:
+        return "Ofo";
+    case Company.limeBike:
+        return "Lime";
+    default:
+        return "Unknown";
+    }
+}

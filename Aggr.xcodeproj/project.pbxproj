@@ -44,6 +44,18 @@
 		C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
 		C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
 		C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
+		C3DFDEBF2188BD80006F9CC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323E394217D32CF00015C6F /* Constants.swift */; };
+		C3DFDEC02188BD81006F9CC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323E394217D32CF00015C6F /* Constants.swift */; };
+		C3DFDEC12188BF8C006F9CC8 /* VehicleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EF2B5217FC23A00B9F515 /* VehicleCollectionCell.swift */; };
+		C3DFDEC22188BF8D006F9CC8 /* VehicleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EF2B5217FC23A00B9F515 /* VehicleCollectionCell.swift */; };
+		C3DFDEC32188C282006F9CC8 /* VehicleCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32EF2B6217FC23A00B9F515 /* VehicleCollectionCell.xib */; };
+		C3DFDEC42188C283006F9CC8 /* VehicleCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32EF2B6217FC23A00B9F515 /* VehicleCollectionCell.xib */; };
+		C3DFDEC52188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
+		C3DFDEC62188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
+		C3DFDEC72188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */; };
+		C3DFDEC82188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */; };
+		C3DFDEC92188C2B8006F9CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A46214894590075928B /* AppDelegate.swift */; };
+		C3DFDECA2188C2B9006F9CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A46214894590075928B /* AppDelegate.swift */; };
 		C3FD6B122182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
 		C3FD6B132182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
 		C3FD6B142182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
@@ -180,12 +192,12 @@
 		C3024A45214894590075928B /* Aggr */ = {
 			isa = PBXGroup;
 			children = (
+				C323E394217D32CF00015C6F /* Constants.swift */,
 				C3024A46214894590075928B /* AppDelegate.swift */,
 				C3FD6B182182469800AB8665 /* BottomSheetCollectionViewController.swift */,
 				C3FD6B192182469800AB8665 /* BottomSheetCollectionViewController.xib */,
 				C3FD6B102182454600AB8665 /* MapViewController.swift */,
 				C3FD6B112182454600AB8665 /* MapViewController.xib */,
-				C323E394217D32CF00015C6F /* Constants.swift */,
 				C3942985214ADC7A00AEB1E1 /* Vehicle.swift */,
 				C32EF2B5217FC23A00B9F515 /* VehicleCollectionCell.swift */,
 				C32EF2B6217FC23A00B9F515 /* VehicleCollectionCell.xib */,
@@ -367,6 +379,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FD6B162182454600AB8665 /* MapViewController.xib in Resources */,
+				C3DFDEC52188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */,
+				C3DFDEC32188C282006F9CC8 /* VehicleCollectionCell.xib in Resources */,
 				C3FD6B1E2182469800AB8665 /* BottomSheetCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +390,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FD6B172182454600AB8665 /* MapViewController.xib in Resources */,
+				C3DFDEC62188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */,
+				C3DFDEC42188C283006F9CC8 /* VehicleCollectionCell.xib in Resources */,
 				C3FD6B1F2182469800AB8665 /* BottomSheetCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,8 +550,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DFDEC12188BF8C006F9CC8 /* VehicleCollectionCell.swift in Sources */,
 				C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C3FD6B1B2182469800AB8665 /* BottomSheetCollectionViewController.swift in Sources */,
+				C3DFDEC92188C2B8006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
 				C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
 				C35F6E18215C293C00F01F13 /* VehicleCardView.swift in Sources */,
@@ -545,6 +563,8 @@
 				C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
 				C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
+				C3DFDEBF2188BD80006F9CC8 /* Constants.swift in Sources */,
+				C3DFDEC72188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,8 +572,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DFDEC22188BF8D006F9CC8 /* VehicleCollectionCell.swift in Sources */,
 				C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C3FD6B1C2182469800AB8665 /* BottomSheetCollectionViewController.swift in Sources */,
+				C3DFDECA2188C2B9006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
 				C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
 				C35F6E19215C293C00F01F13 /* VehicleCardView.swift in Sources */,
@@ -563,6 +585,8 @@
 				C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
 				C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
+				C3DFDEC02188BD81006F9CC8 /* Constants.swift in Sources */,
+				C3DFDEC82188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

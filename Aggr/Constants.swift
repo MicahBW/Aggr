@@ -9,6 +9,8 @@
 import Foundation
 import CoreGraphics
 import UIKit
+import CoreData
+import CoreLocation
 
 
 struct Constants {
@@ -23,6 +25,24 @@ struct Constants {
     struct GMSHandling {
         
         public static let APIKey = "AIzaSyCeyTRCibAy4ax2biVBzO76yeQZWPA3ULw"
+        
+    }
+    
+    struct MapTesting {
+        
+        struct TestCoordinates {
+            
+            public static let tc1 = CLLocationCoordinate2DMake(38.898366, -77.039474)
+            
+            public static let tc2 = CLLocationCoordinate2DMake(38.900321, -77.033644)
+            
+            public static let tc3 = CLLocationCoordinate2DMake(38.900000, -77.033634)
+            
+            public static let tc4 = CLLocationCoordinate2DMake(38.899999, -77.033635)
+            
+            public static let tc5 = CLLocationCoordinate2DMake(38.899988, -77.033600)
+
+        }
         
     }
     
@@ -54,4 +74,8 @@ struct Constants {
             }
         }
     }
+    
+    
+    
+    
 }

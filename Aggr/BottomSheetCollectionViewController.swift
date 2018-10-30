@@ -6,7 +6,15 @@
 //  Copyright © 2018 AggrCo. All rights reserved.
 //
 
+
+
+
 import UIKit
+import CoreLocation
+import CoreData
+import GoogleMaps
+import GooglePlaces
+
 
 private let reuseIdentifier = "Cell"
 
@@ -14,8 +22,20 @@ class BottomSheetCollectionViewController: UICollectionViewController {
     
     //let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
 
+    let items = [Vehicle(location: Constants.MapTesting.TestCoordinates.tc1, company: Company.ofo, type: VehicleType.bike, scooterInfo: nil), Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: Company.ofo, type: VehicleType.bike, scooterInfo: nil), Vehicle(location: Constants.MapTesting.TestCoordinates.tc3, company: Company.ofo, type: VehicleType.bike, scooterInfo: nil)]
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
+        
+        print("okay")
         super.viewDidLoad()
         
         
@@ -23,7 +43,7 @@ class BottomSheetCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(VehicleCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         // Do any additional setup after loading the view.
         
@@ -34,14 +54,15 @@ class BottomSheetCollectionViewController: UICollectionViewController {
         let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(BottomSheetCollectionViewController.panGesture))
         view.addGestureRecognizer(gesture)
         
-        
-        
+
         // mine
         
         self.collectionView?.backgroundColor = UIColor(white: 1, alpha: 0.8)
     }
     
     
+    
+
     
 
     
@@ -65,13 +86,15 @@ class BottomSheetCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return items.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! VehicleCollectionCell
     
         // Configure the cell
+        
+        cell.configureForVehicle(items[indexPath.item])
     
         return cell
     }
@@ -116,6 +139,7 @@ class BottomSheetCollectionViewController: UICollectionViewController {
     
     
     
+    //MARK: - Bottom Sliding Functions
     
     
     /// Blurs what is under the bottom view in its current state
