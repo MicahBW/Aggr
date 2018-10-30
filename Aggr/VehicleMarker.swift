@@ -18,18 +18,19 @@ import UIKit
 
 struct VehicleMarkerStyle {
     var icon : UIImage
-    var color : UIColor
+    var color : UIColor = .black
     
     
     init (forCompany company: Company, andVehicleType vehicleType: VehicleType) {
-        icon = logoForVehicleType(vehicleType)
-        color = colorForCompany(company)
+        icon = logoForVehicleTypeAndCompany(type: vehicleType, company: company)
+        //color = colorForCompany(company)
     }
-    
+    /*
     init (forVehicle vehicle: Vehicle) {
-        icon = logoForVehicleType(vehicle.type)
-        color = colorForCompany(vehicle.company)
+        icon = logoForVehicleTypeAndCompany(type: vehicle.type, company: company)
+        //color = colorForCompany(vehicle.company)
     }
+ */
 }
 
 
@@ -63,7 +64,7 @@ class VehicleMarker : GMSMarker {
     
     
     var markerIcon : UIImage {
-        let retIcon = logoForVehicleType(vehicle.type)
+        let retIcon = logoForVehicleTypeAndCompany(type: vehicle.type, company: vehicle.company)
         //retIcon.tint(color: UIColor.yellow)s
         //UIImageView.tintColor = UIColor.yellow
         //let myimage = retIcon.withRenderingMode(.alwaysTemplate)

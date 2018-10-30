@@ -153,6 +153,14 @@ class BottomSheetCollectionViewController: UICollectionViewController {
         blurredView.frame = UIScreen.main.bounds
         
         view.insertSubview(blurredView, at: 0)
+        
+        
+        
+        var textv = UITextView()
+        
+        textv.text = "dsffsasf"
+        
+        view.insertSubview(textv, at: 1)
     }
     
     

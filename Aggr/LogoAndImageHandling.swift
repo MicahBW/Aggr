@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import CoreLocation
 
 
 //MARK: - Extend UIImageView
@@ -100,15 +100,19 @@ func colorForCompany(_ company: Company) -> UIColor {
 }
 
 
-func logoForVehicleType(_ type: VehicleType) -> UIImage {
+func logoForVehicleTypeAndCompany(type: VehicleType, company: Company) -> UIImage {
     
     
     var returnImg : UIImage
     switch type {
     case VehicleType.bike:
-        returnImg = UIImage(named: "BikeMarker")!
+        returnImg = UIImage(named: "LimeBikeMarker")!
     case VehicleType.scooter:
-        returnImg = UIImage(named: "ScooterMarker")!
+        if company == Company.bird {
+            returnImg = UIImage(named: "BirdScooterMarker")!
+        } else {
+            returnImg = UIImage(named: "LimeScooterMarker")!
+        }
     default:
         returnImg = UIImage(named: "BikeMarker")!
     }
@@ -152,5 +156,12 @@ func nameOfCompany(_ company: Company) -> String {
         return "Lime";
     default:
         return "Unknown";
+    }
+}
+
+
+extension CLLocationDistance {
+    var inMiles : Float {
+        return  Float(self)/1609.344
     }
 }

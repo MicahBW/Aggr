@@ -18,6 +18,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var mapView: GMSMapView!
     
     
+    @IBOutlet weak var textbox: UITextView!
+    //xvar textbox : UITextView!
+    
     
     override func loadView() {
         
@@ -58,6 +61,75 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let height = view.frame.height
         let width = view.frame.width
         bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+ 
+        
+        
+        /*
+        let bottomVC = UIViewController()
+        self.addChildViewController(bottomVC)
+        self.view.addSubview(bottomVC.view)
+        let height = view.frame.height
+        let width = view.frame.width
+        bottomVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        
+        let blurEffect = UIBlurEffect.init(style: .dark)
+        let visualEffect = UIVisualEffectView.init(effect: blurEffect)
+        let blurredView = UIVisualEffectView.init(effect: blurEffect)
+        blurredView.contentView.addSubview(visualEffect)
+        
+        visualEffect.frame = UIScreen.main.bounds
+        blurredView.frame = UIScreen.main.bounds
+        
+        bottomVC.view.insertSubview(blurredView, at: 0)
+ 
+        
+        
+        
+        var bottext = UIView()
+        
+        bottext.backgroundColor = .red
+        
+        //bottext.text = "Hello, World"
+        
+        bottomVC.view = bottext
+        
+        */
+        
+        var textList : [String] = []
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            let vehList = getVehList()
+        for v in vehList {
+            var str = ""
+            str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + String(v.distanceFromUser.inMiles)  +  " miles away" + "n" ;
+            textList.append(str)
+            print("HERE: ", textList)
+            var totString = ""
+            for text in textList {
+                totString += text
+            }
+            print(totString)
+            //self.textbox.frame = self.view.frame
+            
+            let box = UITextView(frame: CGRect(x: 0, y: 0, width:  self.view.frame.width, height:  self.view.frame.height / 4))
+            box.text = totString
+            box.backgroundColor = .black
+            
+            box.text = "asdfsfdfadssff"
+            
+            self.view.addSubview(box)
+            
+
+           // self.textbox.text = totString;
+            //self.view.addSubview(self.textbox)
+            
+            
+        }
+        
+        
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

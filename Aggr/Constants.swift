@@ -41,6 +41,8 @@ struct Constants {
             public static let tc4 = CLLocationCoordinate2DMake(38.899999, -77.033635)
             
             public static let tc5 = CLLocationCoordinate2DMake(38.899988, -77.033600)
+            
+            public static let userTestPos = CLLocationCoordinate2DMake(38.90000, -77.0336)
 
         }
         
