@@ -102,7 +102,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             let vehList = getVehList()
         for v in vehList {
             var str = ""
-            str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + String(v.distanceFromUser.inMiles)  +  " miles away" + "\n" ;
+            str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + " " + String(v.distanceFromUser.inMiles)  +  " miles away" + "\n \n" ;
             textList.append(str)
             print("HERE: ", textList)
             var totString = ""
@@ -112,9 +112,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             print(totString)
             //self.textbox.frame = self.view.frame
             
-            let box = UITextView(frame: CGRect(x: 0, y: 0, width:  self.view.frame.width, height:  self.view.frame.height / 4))
+            let box = UITextView(frame: CGRect(x: 0, y: self.view.frame.height * 3 / 4, width:  self.view.frame.width, height:  self.view.frame.height - self.view.frame.height * 1 / 4 ))
             box.text = totString
-            box.backgroundColor = .red
+            box.backgroundColor = .white
+            box.layer.cornerRadius = 20
+            box.font = UIFont(name: "Courier-Bold", size: 14)
+            
+            box.isEditable = false;
+            
+            
             
             //box.text = "asdfsfdfadssff"
             
