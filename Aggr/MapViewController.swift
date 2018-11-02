@@ -18,7 +18,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var mapView: GMSMapView!
     
     
-    @IBOutlet weak var textbox: UITextView!
+    //@IBOutlet weak var textbox: UITextView!
     //xvar textbox : UITextView!
     
     
@@ -48,28 +48,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     public func addBottomSheetView() {
         
-        // init bottomSheetVC
-        let layout = UICollectionViewFlowLayout()
+        // 1- Init bottomSheetVC
         let bottomSheetVC = VehicleListViewController()
-            //BottomSheetCollectionViewController(collectionViewLayout: layout)
         
-        // add bottomSheetVC as a child view
+        // 2- Add bottomSheetVC as a child view
         self.addChildViewController(bottomSheetVC)
         self.view.addSubview(bottomSheetVC.view)
         bottomSheetVC.didMove(toParentViewController: self)
         
-        // adjust bottomSheet frame and initial position.
+        // 3- Adjust bottomSheet frame and initial position.
         let height = view.frame.height
-        let width = view.frame.width
-        bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        let width  = view.frame.width
+        bottomSheetVC.view.frame = CGRect(x:0, y:self.view.frame.maxY, width: width, height: height)
         
         
+        //var textList : [String] = []
         
-        
-        
-        var textList : [String] = []
-        
-        
+        /*
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             
             let vehList = getVehList()
@@ -102,7 +97,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             
             
         }
-        
+        */
     }
     
     override func viewDidAppear(_ animated: Bool) {
