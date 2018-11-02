@@ -50,7 +50,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         // init bottomSheetVC
         let layout = UICollectionViewFlowLayout()
-        let bottomSheetVC = BottomSheetCollectionViewController(collectionViewLayout: layout)
+        let bottomSheetVC = VehicleListViewController()
+            //BottomSheetCollectionViewController(collectionViewLayout: layout)
         
         // add bottomSheetVC as a child view
         self.addChildViewController(bottomSheetVC)

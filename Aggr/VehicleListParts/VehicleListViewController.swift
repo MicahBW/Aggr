@@ -6,11 +6,28 @@
 //  Copyright © 2018 AggrCo. All rights reserved.
 //
 
+
+//https://medium.com/swift-programming/dynamic-layouts-in-swift-b56cf8049b08
+
 import UIKit
 import CoreLocation
 import CoreData
 
 class VehicleListViewController: UIViewController {
+    
+    
+    
+    
+    var vertLayout : VerticalLayout
+    
+    init () {
+        vertLayout = VerticalLayout(width: 343) //PERROR:
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     
     
@@ -84,9 +101,16 @@ class VehicleListViewController: UIViewController {
         
         //PERROR: Doing some sketch ass shit down here
         
+        
+        
         for vehicle in vehicles {
             
-        
+            let listItem : VehicleListItemView = VehicleListItemView(frame: vertLayout.frame) //FIX
+            
+            listItem.configure(forVehicle: vehicle)
+            
+            vertLayout.addSubview(VehicleListItemView())
+            
         }
         
     }

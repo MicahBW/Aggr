@@ -10,56 +10,67 @@ import UIKit
 
 class VehicleListItemView: UIView {
     
-    let margins : CGFloat = 9
     
-    var companyButton : CompanyButton
-    var distanceTextView: DistanceTextView
-    var directionsButton: DirectionsButton
-    var typeIconImageView: TypeIconImageView
+    let margins : CGFloat = 9
+    let dtvHeight : CGFloat = 27
+    let dtvWidth : CGFloat = 108
+    let directionsButtonWidth : CGFloat = 52
+    
+    
+    var companyButton : UIButton
+    var distanceTextView: UITextView
+    var directionsButton: UIButton
+    var typeIconImageView: UIImageView
+    
     
     override init(frame: CGRect) {
-        companyButton = CompanyButton()
-        distanceTextView = DistanceTextView()
-        directionsButton = DirectionsButton()
-        typeIconImageView = TypeIconImageView()
+        companyButton = UIButton()
+        distanceTextView = UITextView()
+        directionsButton = UIButton()
+        typeIconImageView = UIImageView()
         super.init(frame: frame)
+        
+        
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
-        companyButton = CompanyButton()
-        distanceTextView = DistanceTextView()
-        directionsButton = DirectionsButton()
-        typeIconImageView = TypeIconImageView()
-        super.init(coder: aDecoder)
-        print("Vehicle List Item View RQUIRED CODER USED -- THIS SHOULD NOT HAPPEN")
+        fatalError("init(coder:) has not been implemented")
     }
     
     
-    /// DO NOT CALL FROM INIT
-    ///
-    /// - Parameter vehicle: Vehicle passed in
-    public func configure(forVehicle vehicle : Vehicle) {
+    public func configure(forVehicle vehicle: Vehicle) {
+        self.backgroundColor = .blue
         
-        
-       
-        
+        // company button
         addSubview(companyButton)
+        companyButton.backgroundColor = .red
+        companyButton.frame = CGRect(x: 0, y: 0, width: self.frame.height, height: self.frame.height)
+        
+        
+        // distanceTextView
         addSubview(distanceTextView)
+        distanceTextView.backgroundColor = .green
+        distanceTextView.frame = CGRect(x: self.frame.height + 2 * margins, y: 2 * margins, width: dtvWidth, height: dtvHeight)
+        
+        
+        // directions button
         addSubview(directionsButton)
+        directionsButton.backgroundColor = .yellow
+        directionsButton.frame = CGRect(x: self.frame.width - self.frame.height - self.margins - directionsButtonWidth, y: self.margins, width: directionsButtonWidth, height: directionsButtonWidth)
+        
+        // typeIconImageView
         addSubview(typeIconImageView)
-        
-        
+        typeIconImageView.backgroundColor = .orange
+        typeIconImageView.frame = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height)
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
-    
-    
-
 }
+
+
+/*
+ // Only override draw() if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ override func draw(_ rect: CGRect) {
+ // Drawing code
+ }
+ */
+
