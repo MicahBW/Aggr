@@ -39,15 +39,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     public func addBottomSheetView() {
-        /*
+        
         // init bottomSheetVC
         let layout = UICollectionViewFlowLayout()
         let bottomSheetVC = BottomSheetCollectionViewController(collectionViewLayout: layout)
@@ -61,79 +61,45 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let height = view.frame.height
         let width = view.frame.width
         bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
- 
-        
-        */
-        /*
-        let bottomVC = UIViewController()
-        self.addChildViewController(bottomVC)
-        self.view.addSubview(bottomVC.view)
-        let height = view.frame.height
-        let width = view.frame.width
-        bottomVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
-        
-        let blurEffect = UIBlurEffect.init(style: .dark)
-        let visualEffect = UIVisualEffectView.init(effect: blurEffect)
-        let blurredView = UIVisualEffectView.init(effect: blurEffect)
-        blurredView.contentView.addSubview(visualEffect)
-        
-        visualEffect.frame = UIScreen.main.bounds
-        blurredView.frame = UIScreen.main.bounds
-        
-        bottomVC.view.insertSubview(blurredView, at: 0)
- 
         
         
         
-        var bottext = UIView()
         
-        bottext.backgroundColor = .red
-        
-        //bottext.text = "Hello, World"
-        
-        bottomVC.view = bottext
-        
-        */
         
         var textList : [String] = []
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            
             let vehList = getVehList()
-        for v in vehList {
-            var str = ""
-            str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + " " + String(v.distanceFromUser.inMiles)  +  " miles away" + "\n \n" ;
-            textList.append(str)
-            print("HERE: ", textList)
-            var totString = ""
-            for text in textList {
-                totString += text
+            
+            for v in vehList {
+                var str = ""
+                str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + " " + String(v.distanceFromUser.inMiles)  +  " miles away" + "\n \n" ;
+                textList.append(str)
+                print("HERE: ", textList)
+                var totString = ""
+                for text in textList {
+                    totString += text
+                }
+                print(totString)
+                //self.textbox.frame = self.view.frame
+                
+                let box = UITextView(frame: CGRect(x: 0, y: self.view.frame.height * 3 / 4, width:  self.view.frame.width, height:  self.view.frame.height - self.view.frame.height * 1 / 4 ))
+                box.text = totString
+                box.backgroundColor = .white
+                box.layer.cornerRadius = 20
+                box.font = UIFont(name: "Courier-Bold", size: 14)
+                
+                box.isEditable = false;
+                //self.view.addSubview(box)
+                
+                
+                
+                
             }
-            print(totString)
-            //self.textbox.frame = self.view.frame
-            
-            let box = UITextView(frame: CGRect(x: 0, y: self.view.frame.height * 3 / 4, width:  self.view.frame.width, height:  self.view.frame.height - self.view.frame.height * 1 / 4 ))
-            box.text = totString
-            box.backgroundColor = .white
-            box.layer.cornerRadius = 20
-            box.font = UIFont(name: "Courier-Bold", size: 14)
-            
-            box.isEditable = false;
             
             
-            
-            //box.text = "asdfsfdfadssff"
-            
-            self.view.addSubview(box)
-            
-
-           // self.textbox.text = totString;
-            //self.view.addSubview(self.textbox)
-            
-            
-        }
-        
-        
         }
         
     }
@@ -147,16 +113,16 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     
     
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

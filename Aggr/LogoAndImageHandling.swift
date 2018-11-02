@@ -28,44 +28,6 @@ extension UIImageView {
     
 }
 
-/*
-extension UIView {
-    
-    // If Swift version is lower than 4.2,
-    // You should change the name. (ex. var renderedImage: UIImage?)
-    
-    var snapImage: UIImage? {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image { rendererContext in layer.render(in: rendererContext.cgContext) }
-    }
-}
-*/
-
-extension UIImage
-{
-    
-    
-    
-    /*
-    func tinted(color: UIColor) -> UIImage {
-        
-        let imgView = UIImageView(image: self)
-        let templateImage = imgView.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-        imgView.image = templateImage
-        imgView.tintColor = color
-        
-        //return imgView.snapImage!
-        
-        
-    }
- */
-    
-    
-    
-    
-    
-    
-}
 
 
 
@@ -100,7 +62,7 @@ func colorForCompany(_ company: Company) -> UIColor {
 }
 
 
-func logoForVehicleTypeAndCompany(type: VehicleType, company: Company) -> UIImage {
+func pinForVehicleTypeAndCompany(type: VehicleType, company: Company) -> UIImage {
     
     
     var returnImg : UIImage
@@ -165,3 +127,5 @@ extension CLLocationDistance {
         return  Float(self)/1609.344
     }
 }
+
+

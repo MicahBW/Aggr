@@ -22,7 +22,7 @@ struct VehicleMarkerStyle {
     
     
     init (forCompany company: Company, andVehicleType vehicleType: VehicleType) {
-        icon = logoForVehicleTypeAndCompany(type: vehicleType, company: company)
+        icon = pinForVehicleTypeAndCompany(type: vehicleType, company: company)
         //color = colorForCompany(company)
     }
     /*
@@ -64,7 +64,7 @@ class VehicleMarker : GMSMarker {
     
     
     var markerIcon : UIImage {
-        let retIcon = logoForVehicleTypeAndCompany(type: vehicle.type, company: vehicle.company)
+        let retIcon = pinForVehicleTypeAndCompany(type: vehicle.type, company: vehicle.company)
         //retIcon.tint(color: UIColor.yellow)s
         //UIImageView.tintColor = UIColor.yellow
         //let myimage = retIcon.withRenderingMode(.alwaysTemplate)

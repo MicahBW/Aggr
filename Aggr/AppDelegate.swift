@@ -46,8 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("test")
         
         
-        var lat: Double = 38.919389
-        var long: Double = -77.0278109
+        let lat: Double = 38.89509248686296
+        let long: Double = -77.03707623761149
         let rnge: Double = 100.0
         
         let CLLD: Double = rnge
