@@ -12,6 +12,46 @@
 import UIKit
 import CoreLocation
 import CoreData
+
+
+
+class VehicleListViewController: PullUpController {
+    
+    var vertLayout : VerticalLayout
+    
+    init() {
+        vertLayout = VerticalLayout(width: 343)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func updateList(withVehicles vehicles: [Vehicle]) -> Void {
+        
+        //PERROR: Doing some sketch ass shit down here
+        
+        
+        
+        for vehicle in vehicles {
+            
+            let listItem : VehicleListItemView = VehicleListItemView(frame: vertLayout.frame) //FIX
+            
+            listItem.configure(forVehicle: vehicle)
+            
+            vertLayout.addSubview(VehicleListItemView())
+            
+        }
+    }
+    
+}
+
+
+
+
+
+
 /*
 class VehicleListViewController: UIViewController {
     
@@ -133,7 +173,7 @@ class VehicleListViewController: UIViewController {
 
 }
 */
-
+/*
 
 class VehicleListViewController: UIViewController {
     
@@ -200,4 +240,4 @@ class VehicleListViewController: UIViewController {
 
 }
 
-
+*/

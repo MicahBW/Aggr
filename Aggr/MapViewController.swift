@@ -48,20 +48,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     public func addBottomSheetView() {
         
-        // 1- Init bottomSheetVC
-        let bottomSheetVC = VehicleListViewController()
         
-        // 2- Add bottomSheetVC as a child view
-        self.addChildViewController(bottomSheetVC)
-        self.view.addSubview(bottomSheetVC.view)
-        bottomSheetVC.didMove(toParentViewController: self)
+        var pullUpController = VehicleListViewController()
         
-        // 3- Adjust bottomSheet frame and initial position.
-        let height = view.frame.height
-        let width  = view.frame.width
-        bottomSheetVC.view.frame = CGRect(x:0, y:self.view.frame.maxY, width: width, height: height)
-        
-        
+        addPullUpController(pullUpController, initialStickyPointOffset: 100, animated: true)
         //var textList : [String] = []
         
         /*
