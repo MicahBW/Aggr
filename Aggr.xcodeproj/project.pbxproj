@@ -51,6 +51,9 @@
 		C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
 		C39429A7214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
 		C39429A8214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */; };
+		C3C6D811218D732A00DA25FF /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6D810218D732A00DA25FF /* PullUpController.swift */; };
+		C3C6D812218D732A00DA25FF /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6D810218D732A00DA25FF /* PullUpController.swift */; };
+		C3C6D813218D732A00DA25FF /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6D810218D732A00DA25FF /* PullUpController.swift */; };
 		C3DFDEBF2188BD80006F9CC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323E394217D32CF00015C6F /* Constants.swift */; };
 		C3DFDEC02188BD81006F9CC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323E394217D32CF00015C6F /* Constants.swift */; };
 		C3DFDEC52188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
@@ -115,6 +118,7 @@
 		C394298D214ADEC500AEB1E1 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
 		C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterData.swift; sourceTree = "<group>"; };
 		C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMarker.swift; sourceTree = "<group>"; };
+		C3C6D810218D732A00DA25FF /* PullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
 		C3FD6B102182454600AB8665 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C3FD6B112182454600AB8665 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +194,7 @@
 			children = (
 				C319AD9D218B94F8002167A5 /* VehicleListParts */,
 				C323E394217D32CF00015C6F /* Constants.swift */,
+				C3C6D810218D732A00DA25FF /* PullUpController.swift */,
 				C3024A46214894590075928B /* AppDelegate.swift */,
 				C3FD6B102182454600AB8665 /* MapViewController.swift */,
 				C3FD6B112182454600AB8665 /* MapViewController.xib */,
@@ -535,6 +540,7 @@
 				C319AD87218B8E47002167A5 /* VehicleListViewController.swift in Sources */,
 				C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */,
 				C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */,
+				C3C6D811218D732A00DA25FF /* PullUpController.swift in Sources */,
 				C39429A6214B1D0D00AEB1E1 /* VehicleMarker.swift in Sources */,
 				C394298E214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
 				C35C536F2165B58700FBD032 /* GetAllVehicles.swift in Sources */,
@@ -557,6 +563,7 @@
 				C3DFDEC92188C2B8006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
 				C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
+				C3C6D812218D732A00DA25FF /* PullUpController.swift in Sources */,
 				C3FD6B132182454600AB8665 /* MapViewController.swift in Sources */,
 				C39429A3214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
 				C394298B214ADE4C00AEB1E1 /* Company.swift in Sources */,
@@ -579,6 +586,7 @@
 				C3DFDECA2188C2B9006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
 				C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
+				C3C6D813218D732A00DA25FF /* PullUpController.swift in Sources */,
 				C3FD6B142182454600AB8665 /* MapViewController.swift in Sources */,
 				C39429A4214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
 				C394298C214ADE4C00AEB1E1 /* Company.swift in Sources */,
