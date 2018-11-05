@@ -62,6 +62,7 @@ class VehicleListViewController: PullUpController {
         var item = VehicleListItem(frame: CGRect(x: 0, y: Constants.VehicleList.spacing, width: Constants.VehicleList.itemWidth, height: Constants.VehicleList.itemHeight))
         item.configure(forVehicle: vehicle)
         vertView.addSubview(item)
+        item.centerInView()
     }
     
 }

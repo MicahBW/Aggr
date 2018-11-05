@@ -60,6 +60,18 @@ class VehicleListItem: UIView {
         addSubview(typeIconImageView)
         typeIconImageView.backgroundColor = .orange
         typeIconImageView.frame = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height)
+
+    
+    }
+    
+    
+    /// Must be called after it has been added to a superview that also has a superview
+    ///
+    /// - Returns: Void
+    public func centerInView () -> Void {
+        if let superv = self.superview, let supersuperv = self.superview?.superview {
+            self.center = superv.convert(superv.center, from:supersuperv)
+        }
     }
 }
 

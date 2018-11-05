@@ -54,42 +54,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         addPullUpController(pullUpController, initialStickyPointOffset: 100, animated: true)
         
         pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc1, company: .bird, type: .scooter, scooterInfo: nil))
-        //var textList : [String] = []
         
-        /*
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            
-            let vehList = getVehList()
-            
-            for v in vehList {
-                var str = ""
-                str = "There is a " + nameOfCompany(v.company) + " " + nameOfVehicleType(v.type) + " " + String(v.distanceFromUser.inMiles)  +  " miles away" + "\n \n" ;
-                textList.append(str)
-                print("HERE: ", textList)
-                var totString = ""
-                for text in textList {
-                    totString += text
-                }
-                print(totString)
-                //self.textbox.frame = self.view.frame
-                
-                let box = UITextView(frame: CGRect(x: 0, y: self.view.frame.height * 3 / 4, width:  self.view.frame.width, height:  self.view.frame.height - self.view.frame.height * 1 / 4 ))
-                box.text = totString
-                box.backgroundColor = .white
-                box.layer.cornerRadius = 20
-                box.font = UIFont(name: "Courier-Bold", size: 14)
-                
-                box.isEditable = false;
-                //self.view.addSubview(box)
-                
-                
-                
-                
-            }
-            
-            
-        }
-        */
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
