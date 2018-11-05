@@ -52,6 +52,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         var pullUpController = VehicleListViewController()
         
         addPullUpController(pullUpController, initialStickyPointOffset: 100, animated: true)
+        
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc1, company: .bird, type: .scooter, scooterInfo: nil))
         //var textList : [String] = []
         
         /*

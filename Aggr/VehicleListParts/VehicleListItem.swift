@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VehicleListItemView: UIView {
+class VehicleListItem: UIView {
     
     
     let margins : CGFloat = 9
@@ -29,8 +29,6 @@ class VehicleListItemView: UIView {
         directionsButton = UIButton()
         typeIconImageView = UIImageView()
         super.init(frame: frame)
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

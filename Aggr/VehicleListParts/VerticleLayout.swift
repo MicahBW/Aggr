@@ -53,3 +53,32 @@ class VerticalLayout: UIView {
     }
     
 }
+
+
+
+/// A verticle layout which always takes the width of the screen
+/// Height is placed relative to one abbove it
+class VerticalScreenLayout: VerticalLayout {
+    
+    
+    init() {
+        super.init(width: UIScreen.main.bounds.width)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        
+        self.frame.size.width = UIScreen.main.bounds.width
+        super.layoutSubviews()
+        
+    }
+    
+}
+
+
+
+
+

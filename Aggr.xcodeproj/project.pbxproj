@@ -23,9 +23,9 @@
 		C319AD8A218B8E47002167A5 /* VehicleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C319AD86218B8E47002167A5 /* VehicleListViewController.xib */; };
 		C319AD8B218B8E47002167A5 /* VehicleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C319AD86218B8E47002167A5 /* VehicleListViewController.xib */; };
 		C319AD8C218B8E47002167A5 /* VehicleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C319AD86218B8E47002167A5 /* VehicleListViewController.xib */; };
-		C319ADB8218BA042002167A5 /* VehicleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADB7218BA042002167A5 /* VehicleListItemView.swift */; };
-		C319ADB9218BA042002167A5 /* VehicleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADB7218BA042002167A5 /* VehicleListItemView.swift */; };
-		C319ADBA218BA042002167A5 /* VehicleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADB7218BA042002167A5 /* VehicleListItemView.swift */; };
+		C319ADB8218BA042002167A5 /* VehicleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADB7218BA042002167A5 /* VehicleListItem.swift */; };
+		C319ADB9218BA042002167A5 /* VehicleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADB7218BA042002167A5 /* VehicleListItem.swift */; };
+		C319ADBA218BA042002167A5 /* VehicleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADB7218BA042002167A5 /* VehicleListItem.swift */; };
 		C319ADBC218CC3C3002167A5 /* VerticleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADBB218CC3C3002167A5 /* VerticleLayout.swift */; };
 		C319ADBD218CC3C3002167A5 /* VerticleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADBB218CC3C3002167A5 /* VerticleLayout.swift */; };
 		C319ADBE218CC3C3002167A5 /* VerticleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319ADBB218CC3C3002167A5 /* VerticleLayout.swift */; };
@@ -107,7 +107,7 @@
 		C3024A6B2148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C319AD85218B8E47002167A5 /* VehicleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewController.swift; sourceTree = "<group>"; };
 		C319AD86218B8E47002167A5 /* VehicleListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleListViewController.xib; sourceTree = "<group>"; };
-		C319ADB7218BA042002167A5 /* VehicleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListItemView.swift; sourceTree = "<group>"; };
+		C319ADB7218BA042002167A5 /* VehicleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListItem.swift; sourceTree = "<group>"; };
 		C319ADBB218CC3C3002167A5 /* VerticleLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticleLayout.swift; sourceTree = "<group>"; };
 		C323E394217D32CF00015C6F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C34AA20F2162DA0500453B0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 				C319ADBB218CC3C3002167A5 /* VerticleLayout.swift */,
 				C319AD85218B8E47002167A5 /* VehicleListViewController.swift */,
 				C319AD86218B8E47002167A5 /* VehicleListViewController.xib */,
-				C319ADB7218BA042002167A5 /* VehicleListItemView.swift */,
+				C319ADB7218BA042002167A5 /* VehicleListItem.swift */,
 			);
 			path = VehicleListParts;
 			sourceTree = "<group>";
@@ -536,7 +536,7 @@
 				C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
 				C319ADBC218CC3C3002167A5 /* VerticleLayout.swift in Sources */,
 				C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
-				C319ADB8218BA042002167A5 /* VehicleListItemView.swift in Sources */,
+				C319ADB8218BA042002167A5 /* VehicleListItem.swift in Sources */,
 				C319AD87218B8E47002167A5 /* VehicleListViewController.swift in Sources */,
 				C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */,
 				C394298A214ADE4C00AEB1E1 /* Company.swift in Sources */,
@@ -559,7 +559,7 @@
 				C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C319ADBD218CC3C3002167A5 /* VerticleLayout.swift in Sources */,
 				C319AD88218B8E47002167A5 /* VehicleListViewController.swift in Sources */,
-				C319ADB9218BA042002167A5 /* VehicleListItemView.swift in Sources */,
+				C319ADB9218BA042002167A5 /* VehicleListItem.swift in Sources */,
 				C3DFDEC92188C2B8006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
 				C394298F214ADEC500AEB1E1 /* VehicleType.swift in Sources */,
@@ -582,7 +582,7 @@
 				C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C319ADBE218CC3C3002167A5 /* VerticleLayout.swift in Sources */,
 				C319AD89218B8E47002167A5 /* VehicleListViewController.swift in Sources */,
-				C319ADBA218BA042002167A5 /* VehicleListItemView.swift in Sources */,
+				C319ADBA218BA042002167A5 /* VehicleListItem.swift in Sources */,
 				C3DFDECA2188C2B9006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
 				C3942990214ADEC500AEB1E1 /* VehicleType.swift in Sources */,

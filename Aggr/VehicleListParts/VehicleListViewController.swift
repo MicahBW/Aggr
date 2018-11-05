@@ -17,32 +17,51 @@ import CoreData
 
 class VehicleListViewController: PullUpController {
     
-    var vertLayout : VerticalLayout
+    
+    var vertView : VerticalScreenLayout
+    
+    
+    
     
     init() {
-        vertLayout = VerticalLayout(width: 343)
+        vertView = VerticalScreenLayout()
         super.init(nibName: nil, bundle: nil)
+        view.addSubview(vertView) // vertView is a subview of View!
+        //view.backgroundColor = UIColor(white: 0, alpha: 0.5) // Do only if it is up
     }
     
+    
+    
+    
+    /// Required initializer: fails with message "init(coder:) has not been implemented": Fatal Error
+    ///
+    /// - Parameter aDecoder:
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
+    
     public func updateList(withVehicles vehicles: [Vehicle]) -> Void {
-        
-        //PERROR: Doing some sketch ass shit down here
-        
-        
         
         for vehicle in vehicles {
             
-            let listItem : VehicleListItemView = VehicleListItemView(frame: vertLayout.frame) //FIX
+            //let listItem : VehicleListItemView = VehicleListItemView(frame: vertLayout.frame) //FIX
             
-            listItem.configure(forVehicle: vehicle)
+           // listItem.configure(forVehicle: vehicle)
             
-            vertLayout.addSubview(VehicleListItemView())
+            //vertLayout.addSubview(VehicleListItemView())
             
         }
+    }
+    
+    
+    
+    public func addItemForVehicle(_ vehicle: Vehicle) {
+        var item = VehicleListItem(frame: CGRect(x: 0, y: Constants.VehicleList.spacing, width: Constants.VehicleList.itemWidth, height: Constants.VehicleList.itemHeight))
+        item.configure(forVehicle: vehicle)
+        vertView.addSubview(item)
     }
     
 }
