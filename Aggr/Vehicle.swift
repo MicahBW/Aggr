@@ -10,10 +10,13 @@ import Foundation
 import CoreLocation
 import UIKit
 
-
 /// A class representing a vehicle, complete with location, the owning company, the type of vehicle, and the scooterData if it is a scooter
-class Vehicle {
-
+class Vehicle: Equatable, Hashable {
+    static func == (lhs: Vehicle, rhs: Vehicle) -> Bool {
+        return lhs.location.latitude == rhs.location.latitude && lhs.location.longitude == rhs.location.longitude
+    }
+    
+    
     var location: CLLocationCoordinate2D
     var company: Company
     var type: VehicleType
@@ -35,11 +38,16 @@ class Vehicle {
     }
     
     /*
-    var tableViewCell : VehicleTableViewCell {
-        return VehicleTableViewCell(providingCompany: self.owner, style: UITableViewCellStyle.default, reuseIdentifier: nil)
-    }
- */
+     var tableViewCell : VehicleTableViewCell {
+     return VehicleTableViewCell(providingCompany: self.owner, style: UITableViewCellStyle.default, reuseIdentifier: nil)
+     }
+     */
     
+    var hashValue: Int {
+        get {
+            return Int(location.latitude * 100 + location.longitude * 100);
+        }
+    }
     
     // TODO: Function to make a marker.
     
