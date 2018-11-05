@@ -80,7 +80,7 @@ struct Constants {
     
     
     struct VehicleList {
-        public static let itemHeight : CGFloat = 70
+        public static let itemHeight : CGFloat = 50
         public static let spacing : CGFloat = 9
         public static let itemWidth : CGFloat = 343
     }

@@ -14,7 +14,7 @@ class VehicleListItem: UIView {
     let margins : CGFloat = 9
     let dtvHeight : CGFloat = 27
     let dtvWidth : CGFloat = 108
-    let directionsButtonWidth : CGFloat = 52
+
     
     
     var companyButton : UIButton
@@ -48,13 +48,13 @@ class VehicleListItem: UIView {
         // distanceTextView
         addSubview(distanceTextView)
         distanceTextView.backgroundColor = .green
-        distanceTextView.frame = CGRect(x: self.frame.height + 2 * margins, y: 2 * margins, width: dtvWidth, height: dtvHeight)
+        distanceTextView.frame = CGRect(x: self.frame.height + 2 * margins, y: margins, width: dtvWidth, height: dtvHeight)
         
         
         // directions button
         addSubview(directionsButton)
         directionsButton.backgroundColor = .yellow
-        directionsButton.frame = CGRect(x: self.frame.width - self.frame.height - self.margins - directionsButtonWidth, y: self.margins, width: directionsButtonWidth, height: directionsButtonWidth)
+        directionsButton.frame = CGRect(x: self.frame.width - self.frame.height - self.margins - (Constants.VehicleList.itemHeight - 2 * Constants.VehicleList.spacing), y: self.margins, width: Constants.VehicleList.itemHeight - 2 * Constants.VehicleList.spacing , height: Constants.VehicleList.itemHeight - 2 * Constants.VehicleList.spacing)
         
         // typeIconImageView
         addSubview(typeIconImageView)
