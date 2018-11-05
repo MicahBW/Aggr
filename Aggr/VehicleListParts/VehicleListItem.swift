@@ -37,18 +37,24 @@ class VehicleListItem: UIView {
     
     
     public func configure(forVehicle vehicle: Vehicle) {
-        self.backgroundColor = .blue
+        self.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        self.layer.cornerRadius = self.frame.height/2
         
         // company button
         addSubview(companyButton)
-        companyButton.backgroundColor = .red
+        companyButton.backgroundColor = UIColor(white: 0, alpha: 0.7)
         companyButton.frame = CGRect(x: 0, y: 0, width: self.frame.height, height: self.frame.height)
+        companyButton.setImage(logoForCompany(vehicle.company), for: .normal)
+        companyButton.layer.cornerRadius = self.frame.height/2
         
         
         // distanceTextView
         addSubview(distanceTextView)
-        distanceTextView.backgroundColor = .green
+        distanceTextView.isSelectable = false
+        distanceTextView.isEditable = false
+        //distanceTextView.backgroundColor = .green
         distanceTextView.frame = CGRect(x: self.frame.height + 2 * margins, y: margins, width: dtvWidth, height: dtvHeight)
+        distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi"
         
         
         // directions button

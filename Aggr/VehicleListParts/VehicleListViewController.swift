@@ -29,6 +29,7 @@ class VehicleListViewController: PullUpController {
         stickyPointsList = [CGFloat]()
         super.init(nibName: nil, bundle: nil)
         view.addSubview(vertView) // vertView is a subview of View!
+        view.backgroundColor = UIColor(white: 0, alpha: 0.3)
         //view.backgroundColor = UIColor(white: 0, alpha: 0.5) // Do only if it is up
     }
     
@@ -43,25 +44,27 @@ class VehicleListViewController: PullUpController {
     }
     
     
-    
-    
     public func updateList(withVehicles vehicles: [Vehicle]) -> Void {
-        
+        // TODO:
+    }
+    
+    public func addToList(newVehicles vehicles: [Vehicle]) -> Void {
         for vehicle in vehicles {
-            
-            //let listItem : VehicleListItemView = VehicleListItemView(frame: vertLayout.frame) //FIX
-            
-           // listItem.configure(forVehicle: vehicle)
-            
-            //vertLayout.addSubview(VehicleListItemView())
-            
+            addItemForVehicle(vehicle)
         }
     }
     
     
+    public func removeListItem(_ item: VehicleListItem) -> Void {
+        self.view.willRemoveSubview(item) // Possibly problematic not to mention sticky points
+        // maybe instead just make a new instance of this object, just without any subviews!
+    }
     
-    public func addItemForVehicle(_ vehicle: Vehicle) {
-        var item = VehicleListItem(frame: CGRect(x: 0, y: Constants.VehicleList.spacing, width: Constants.VehicleList.itemWidth, height: Constants.VehicleList.itemHeight))
+    
+    
+    
+    public func addItemForVehicle(_ vehicle: Vehicle) -> VehicleListItem {
+        let item = VehicleListItem(frame: CGRect(x: 0, y: Constants.VehicleList.spacing, width: Constants.VehicleList.itemWidth, height: Constants.VehicleList.itemHeight))
         item.configure(forVehicle: vehicle)
         vertView.addSubview(item)
         item.centerInView()
@@ -69,6 +72,7 @@ class VehicleListViewController: PullUpController {
         let heightPerItem : CGFloat = Constants.VehicleList.spacing + Constants.VehicleList.itemHeight
         var totalHeight : CGFloat = CGFloat(numItems) * heightPerItem
         stickyPointsList.append(totalHeight)
+        return item
     }
     
     

@@ -129,3 +129,10 @@ extension CLLocationDistance {
 }
 
 
+extension CLLocationDistance
+{
+    func truncate(places : Int)-> CLLocationDistance
+    {
+        return CLLocationDistance(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
+    }
+}

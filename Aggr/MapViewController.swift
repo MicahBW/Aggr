@@ -53,9 +53,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         addPullUpController(pullUpController, initialStickyPointOffset: 100, animated: true)
         
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc1, company: .bird, type: .scooter, scooterInfo: nil))
+        var i1 = pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc1, company: .bird, type: .scooter, scooterInfo: nil))
         
         pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            pullUpController.removeListItem(i1)
+        }
         
 
     }
