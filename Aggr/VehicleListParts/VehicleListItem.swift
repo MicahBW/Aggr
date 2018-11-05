@@ -13,7 +13,7 @@ class VehicleListItem: UIView {
     
     let margins : CGFloat = 9
     let dtvHeight : CGFloat = 27
-    let dtvWidth : CGFloat = 108
+    let dtvWidth : CGFloat = 150
 
     
     
@@ -21,6 +21,8 @@ class VehicleListItem: UIView {
     var distanceTextView: UITextView
     var directionsButton: UIButton
     var typeIconImageView: UIImageView
+    
+    var lastVehicleUpdatedToShow : Vehicle? = nil
     
     
     override init(frame: CGRect) {
@@ -37,6 +39,7 @@ class VehicleListItem: UIView {
     
     
     public func configure(forVehicle vehicle: Vehicle) {
+        lastVehicleUpdatedToShow = vehicle
         self.backgroundColor = UIColor(white: 0, alpha: 0.5)
         self.layer.cornerRadius = self.frame.height/2
         
@@ -52,21 +55,28 @@ class VehicleListItem: UIView {
         addSubview(distanceTextView)
         distanceTextView.isSelectable = false
         distanceTextView.isEditable = false
-        //distanceTextView.backgroundColor = .green
+        distanceTextView.backgroundColor = .clear
         distanceTextView.frame = CGRect(x: self.frame.height + 2 * margins, y: margins, width: dtvWidth, height: dtvHeight)
         distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi"
+        distanceTextView.font = UIFont(name: "Copperplate-Bold", size: 24)
+        distanceTextView.textColor = .white
+        
         
         
         // directions button
         addSubview(directionsButton)
-        directionsButton.backgroundColor = .yellow
+        //directionsButton.backgroundColor = .yellow
         directionsButton.frame = CGRect(x: self.frame.width - self.frame.height - self.margins - (Constants.VehicleList.itemHeight - 2 * Constants.VehicleList.spacing), y: self.margins, width: Constants.VehicleList.itemHeight - 2 * Constants.VehicleList.spacing , height: Constants.VehicleList.itemHeight - 2 * Constants.VehicleList.spacing)
+        directionsButton.setImage(UIImage(named: "DirectionsIcon"), for: .normal)
         
         // typeIconImageView
         addSubview(typeIconImageView)
         typeIconImageView.backgroundColor = .orange
         typeIconImageView.frame = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height)
-
+        typeIconImageView.layer.cornerRadius = self.frame.height/2
+        
+        directionsButton.addTarget(self, action: #selector(directionsButtonPressed), for: .touchUpInside)
+        companyButton.addTarget(self, action: #selector(companyButtonPressed), for: .touchUpInside)
     
     }
     
@@ -79,6 +89,23 @@ class VehicleListItem: UIView {
             self.center = superv.convert(superv.center, from:supersuperv)
         }
     }
+    
+    @objc private func directionsButtonPressed (sender: UIButton!) -> Void {
+        print("DIRECTIONS BUTTON PRESSED")
+        if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(lastVehicleUpdatedToShow!.location.latitude),\(lastVehicleUpdatedToShow!.location.longitude)&directionsmode=walking") {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    @objc private func companyButtonPressed (sender: UIButton!) -> Void {
+        print("LOGO BUTTON PRESSED")
+    }
+    
+    
+    
+    
+    
+    
 }
 
 
