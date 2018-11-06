@@ -16,7 +16,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     var encompassingView: UIView!
     var mapView: GMSMapView!
-    
+    var locationManager = CLLocationManager()
     
     //@IBOutlet weak var textbox: UITextView!
     //xvar textbox : UITextView!
@@ -27,17 +27,35 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         // deal with GMS
         let camera = GMSCameraPosition.camera(withLatitude: 38.89509248686296, longitude: -77.03707623761149, zoom: 15)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+        mapView.delegate = self
         self.view = mapView
         
+        locationManager.requestWhenInUseAuthorization()
+        
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        print("is location enabled?")
+        print(mapView.isMyLocationEnabled)
+        switch(CLLocationManager.authorizationStatus()) {
+        case .authorizedWhenInUse:
+            print("authorized always")
+            locationManager.startUpdatingLocation()
+            break
+        default:
+            print("oops no location authorization")
+            break
+        }
         
         // add vehicle markers
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             let vehList = getVehList()
             for veh in vehList {
                 let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
                 thisMark.map = mapView
             }
         }
+        
+
     }
     
     override func viewDidLoad() {
@@ -69,20 +87,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         addBottomSheetView()
     }
     
+//    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+//        print("in move")
+//        mapView.clear()
+//    }
     
-    
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    func mapView(_ mapView: GMSMapView, idleAt cameraPosition: GMSCameraPosition) {
+        print("in idle")
+        let lat: Double = cameraPosition.target.latitude
+        let long: Double = cameraPosition.target.longitude
+        let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+        makeAPICall(ofLocation: CLLC2D)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            let vehList = getVehList()
+            for veh in vehList {
+                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                thisMark.map = mapView
+            }
+        }
+    }
 }

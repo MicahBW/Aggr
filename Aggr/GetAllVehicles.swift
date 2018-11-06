@@ -362,13 +362,13 @@ public final class GetAllVehiclesQuery: GraphQLQuery {
 }
 
 
-func makeAPICall(withinRange range: CLLocationDistance, ofLocation location: CLLocationCoordinate2D){
+func makeAPICall(ofLocation location: CLLocationCoordinate2D){
     let apollo: ApolloClient = {
         let configuration = URLSessionConfiguration.default
         // Add additional headers as needed
         configuration.httpAdditionalHeaders = ["content-type": "application/json"] // Replace `<token>`
         
-        let url = URL(string: "https://api.multicycles.org/v1?access_token=qvCTZwGeCTjrkI1TV1OgDUQPcsua03tV")!
+        let url = URL(string: "https://api.multicycles.org/v1?access_token=UgOWIrrzGv4jdmU1FmxnbZSydfqJDXuI")!
         
         return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
     }()
@@ -400,118 +400,118 @@ func makeAPICall(withinRange range: CLLocationDistance, ofLocation location: CLL
             vehList.insert(currentVehicle)
         }
     }
-    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude + 0.01, lng: location.longitude)) { (result, error) in
-        guard let data = result?.data else { return }
-        for v in data.vehicles ?? [] {
-            let lat: Double = v?.lat ?? 0.0
-            let long: Double = v?.lng ?? 0.0
-            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
-            let companyString = v?.provider?.name ?? "null"
-            var companyObject: Company
-            switch (companyString) {
-            case "Bird":
-                companyObject = Company.bird
-                break
-            case "Lime":
-                companyObject = Company.limeBike
-                break
-            case "Ofo":
-                companyObject = Company.ofo
-                break
-            default:
-                companyObject = Company.limeBike
-                break
-            }
-            let typeObject = v?.type ?? VehicleType(rawValue: "null")
-            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
-            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
-            vehList.insert(currentVehicle)
-        }
-    }
-    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude - 0.01, lng: location.longitude)) { (result, error) in
-        guard let data = result?.data else { return }
-        for v in data.vehicles ?? [] {
-            let lat: Double = v?.lat ?? 0.0
-            let long: Double = v?.lng ?? 0.0
-            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
-            let companyString = v?.provider?.name ?? "null"
-            var companyObject: Company
-            switch (companyString) {
-            case "Bird":
-                companyObject = Company.bird
-                break
-            case "Lime":
-                companyObject = Company.limeBike
-                break
-            case "Ofo":
-                companyObject = Company.ofo
-                break
-            default:
-                companyObject = Company.limeBike
-                break
-            }
-            let typeObject = v?.type ?? VehicleType(rawValue: "null")
-            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
-            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
-            vehList.insert(currentVehicle)
-        }
-    }
-    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude, lng: location.longitude + 0.01)) { (result, error) in
-        guard let data = result?.data else { return }
-        for v in data.vehicles ?? [] {
-            let lat: Double = v?.lat ?? 0.0
-            let long: Double = v?.lng ?? 0.0
-            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
-            let companyString = v?.provider?.name ?? "null"
-            var companyObject: Company
-            switch (companyString) {
-            case "Bird":
-                companyObject = Company.bird
-                break
-            case "Lime":
-                companyObject = Company.limeBike
-                break
-            case "Ofo":
-                companyObject = Company.ofo
-                break
-            default:
-                companyObject = Company.limeBike
-                break
-            }
-            let typeObject = v?.type ?? VehicleType(rawValue: "null")
-            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
-            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
-            vehList.insert(currentVehicle)
-        }
-    }
-    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude, lng: location.longitude - 0.01)) { (result, error) in
-        guard let data = result?.data else { return }
-        for v in data.vehicles ?? [] {
-            let lat: Double = v?.lat ?? 0.0
-            let long: Double = v?.lng ?? 0.0
-            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
-            let companyString = v?.provider?.name ?? "null"
-            var companyObject: Company
-            switch (companyString) {
-            case "Bird":
-                companyObject = Company.bird
-                break
-            case "Lime":
-                companyObject = Company.limeBike
-                break
-            case "Ofo":
-                companyObject = Company.ofo
-                break
-            default:
-                companyObject = Company.limeBike
-                break
-            }
-            let typeObject = v?.type ?? VehicleType(rawValue: "null")
-            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
-            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
-            vehList.insert(currentVehicle)
-        }
-    }
+//    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude + 0.01, lng: location.longitude)) { (result, error) in
+//        guard let data = result?.data else { return }
+//        for v in data.vehicles ?? [] {
+//            let lat: Double = v?.lat ?? 0.0
+//            let long: Double = v?.lng ?? 0.0
+//            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+//            let companyString = v?.provider?.name ?? "null"
+//            var companyObject: Company
+//            switch (companyString) {
+//            case "Bird":
+//                companyObject = Company.bird
+//                break
+//            case "Lime":
+//                companyObject = Company.limeBike
+//                break
+//            case "Ofo":
+//                companyObject = Company.ofo
+//                break
+//            default:
+//                companyObject = Company.limeBike
+//                break
+//            }
+//            let typeObject = v?.type ?? VehicleType(rawValue: "null")
+//            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
+//            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
+//            vehList.insert(currentVehicle)
+//        }
+//    }
+//    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude - 0.01, lng: location.longitude)) { (result, error) in
+//        guard let data = result?.data else { return }
+//        for v in data.vehicles ?? [] {
+//            let lat: Double = v?.lat ?? 0.0
+//            let long: Double = v?.lng ?? 0.0
+//            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+//            let companyString = v?.provider?.name ?? "null"
+//            var companyObject: Company
+//            switch (companyString) {
+//            case "Bird":
+//                companyObject = Company.bird
+//                break
+//            case "Lime":
+//                companyObject = Company.limeBike
+//                break
+//            case "Ofo":
+//                companyObject = Company.ofo
+//                break
+//            default:
+//                companyObject = Company.limeBike
+//                break
+//            }
+//            let typeObject = v?.type ?? VehicleType(rawValue: "null")
+//            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
+//            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
+//            vehList.insert(currentVehicle)
+//        }
+//    }
+//    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude, lng: location.longitude + 0.01)) { (result, error) in
+//        guard let data = result?.data else { return }
+//        for v in data.vehicles ?? [] {
+//            let lat: Double = v?.lat ?? 0.0
+//            let long: Double = v?.lng ?? 0.0
+//            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+//            let companyString = v?.provider?.name ?? "null"
+//            var companyObject: Company
+//            switch (companyString) {
+//            case "Bird":
+//                companyObject = Company.bird
+//                break
+//            case "Lime":
+//                companyObject = Company.limeBike
+//                break
+//            case "Ofo":
+//                companyObject = Company.ofo
+//                break
+//            default:
+//                companyObject = Company.limeBike
+//                break
+//            }
+//            let typeObject = v?.type ?? VehicleType(rawValue: "null")
+//            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
+//            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
+//            vehList.insert(currentVehicle)
+//        }
+//    }
+//    apollo.fetch(query: GetAllVehiclesQuery(lat: location.latitude, lng: location.longitude - 0.01)) { (result, error) in
+//        guard let data = result?.data else { return }
+//        for v in data.vehicles ?? [] {
+//            let lat: Double = v?.lat ?? 0.0
+//            let long: Double = v?.lng ?? 0.0
+//            let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+//            let companyString = v?.provider?.name ?? "null"
+//            var companyObject: Company
+//            switch (companyString) {
+//            case "Bird":
+//                companyObject = Company.bird
+//                break
+//            case "Lime":
+//                companyObject = Company.limeBike
+//                break
+//            case "Ofo":
+//                companyObject = Company.ofo
+//                break
+//            default:
+//                companyObject = Company.limeBike
+//                break
+//            }
+//            let typeObject = v?.type ?? VehicleType(rawValue: "null")
+//            let scooterInfoObject = ScooterData.init(batteryCharge: 100)
+//            let currentVehicle = Vehicle(location: CLLC2D, company: companyObject, type: typeObject!, scooterInfo: scooterInfoObject)
+//            vehList.insert(currentVehicle)
+//        }
+//    }
 }
 
 func getVehList() -> Set<Vehicle> {
