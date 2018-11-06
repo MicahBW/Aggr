@@ -13,7 +13,7 @@ import GooglePlaces
 
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
-    
+    var callCount = 0
     var encompassingView: UIView!
     var mapView: GMSMapView!
     var locationManager = CLLocationManager()
@@ -94,6 +94,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, idleAt cameraPosition: GMSCameraPosition) {
         print("in idle")
+        print(callCount)
+        callCount = callCount + 1;
         let lat: Double = cameraPosition.target.latitude
         let long: Double = cameraPosition.target.longitude
         let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
