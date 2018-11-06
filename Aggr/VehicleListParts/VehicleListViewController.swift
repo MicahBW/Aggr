@@ -45,12 +45,21 @@ class VehicleListViewController: PullUpController {
     
     
     public func updateList(withVehicles vehicles: [Vehicle]) -> Void {
-        // TODO:
+        stickyPointsList.removeAll()
+        deleteAllListItems()
+        addToList(newVehicles: vehicles)
     }
     
     public func addToList(newVehicles vehicles: [Vehicle]) -> Void {
         for vehicle in vehicles {
             addItemForVehicle(vehicle)
+        }
+    }
+    
+    public func deleteAllListItems() -> Void {
+        for li in vertView.subviews {
+            print(li, "REMOVING")
+            li.removeFromSuperview()
         }
     }
     

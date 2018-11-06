@@ -30,6 +30,18 @@ extension UIImageView {
 
 
 
+func imageForVehicleType(_ type: VehicleType) -> UIImage {
+    switch type {
+    case .bike:
+        return #imageLiteral(resourceName: "BikeIcon");
+    case .scooter:
+        return #imageLiteral(resourceName: "ScooterIcon")
+    default:
+        return #imageLiteral(resourceName: "UnkIcon")
+    }
+}
+
+
 
 func logoForCompany(_ company : Company) -> UIImage {
     var companyLogo : UIImage

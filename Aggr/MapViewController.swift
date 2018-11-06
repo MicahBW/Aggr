@@ -17,6 +17,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var encompassingView: UIView!
     var mapView: GMSMapView!
     var locationManager = CLLocationManager()
+    var pullUpController = VehicleListViewController()
     
     //@IBOutlet weak var textbox: UITextView!
     //xvar textbox : UITextView!
@@ -53,6 +54,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
                 thisMark.map = mapView
             }
+            self.pullUpController.addToList(newVehicles: Array(vehList).sorted(by: {$0.distanceFromUser < $1.distanceFromUser}))
         }
         
 
@@ -67,18 +69,38 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     public func addBottomSheetView() {
         
         
-        var pullUpController = VehicleListViewController()
+        //var pullUpController = VehicleListViewController()
         
         addPullUpController(pullUpController, initialStickyPointOffset: 100, animated: true)
         
+        
+        /*
         var i1 = pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc1, company: .bird, type: .scooter, scooterInfo: nil))
         
         pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            pullUpController.removeListItem(i1)
+            self.pullUpController.updateList(withVehicles: [Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .limeBike , type: .scooter, scooterInfo: nil)])
+            print("REPLACING")
         }
-        
+        */
 
     }
     
@@ -93,6 +115,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 //    }
     
     func mapView(_ mapView: GMSMapView, idleAt cameraPosition: GMSCameraPosition) {
+        mapView.clear()
         print("in idle")
         print(callCount)
         callCount = callCount + 1;
@@ -106,6 +129,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
                 let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
                 thisMark.map = mapView
             }
+            //self.pullUpController.addToList(newVehicles: Array(vehList))
+            self.pullUpController.updateList(withVehicles: Array(vehList).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
+            //self.pullUpController.deleteAllListItems()
+            //pullUp
+            //self.pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
+
         }
     }
 }
+
+
+
+/*
+func putInAscendingOrder(_ inArray: [Vehicle]) -> [Vehicle] {
+    var ret = [Vehicle]()
+    //ret.insertA
+    
+    
+}
+*/

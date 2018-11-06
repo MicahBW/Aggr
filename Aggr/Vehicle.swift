@@ -21,7 +21,7 @@ class Vehicle: Equatable, Hashable {
     var company: Company
     var type: VehicleType
     var scooterInfo: ScooterData?
-    
+    var distance: CLLocationDistance = 0
     
     /// Standard initializer to be used when called by get functions
     ///
@@ -35,6 +35,11 @@ class Vehicle: Equatable, Hashable {
         self.company = company
         self.type = type
         self.scooterInfo = scooterInfo
+        let rand : [Float] = [0.1,0.2,0.3,0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+        
+        let randChoice = rand.randomElement()
+        self.distance = CLLocationDistance(randChoice!)
+        
     }
     
     /*
@@ -55,8 +60,17 @@ class Vehicle: Equatable, Hashable {
     
     var distanceFromUser : CLLocationDistance {
         let userloc = CLLocation()
-        return userloc.distance(from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+        //return userloc.distance(from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+        /*let rand : [Float] = [0.1,0.2,0.3,0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+        
+        let randChoice = rand.randomElement()
+        return CLLocationDistance(randChoice!)*/
+        
+        return self.distance
     }
+    
+    
+    //func isCloserThan()
     
     
 }

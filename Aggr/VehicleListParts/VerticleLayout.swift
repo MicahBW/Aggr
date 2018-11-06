@@ -14,6 +14,7 @@ class VerticalLayout: UIView {
     
     init(width: CGFloat) {
         super.init(frame: CGRect(x: 0,y: 0, width: width, height: 0))
+        //isScrollEnabled = true
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -77,6 +78,7 @@ class VerticalScreenLayout: VerticalLayout {
     }
     
 }
+
 
 
 

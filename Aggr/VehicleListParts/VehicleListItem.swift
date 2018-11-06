@@ -45,7 +45,7 @@ class VehicleListItem: UIView {
         
         // company button
         addSubview(companyButton)
-        companyButton.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        //companyButton.backgroundColor = UIColor(white: 0, alpha: 0.7)
         companyButton.frame = CGRect(x: 0, y: 0, width: self.frame.height, height: self.frame.height)
         companyButton.setImage(logoForCompany(vehicle.company), for: .normal)
         companyButton.layer.cornerRadius = self.frame.height/2
@@ -74,6 +74,7 @@ class VehicleListItem: UIView {
         typeIconImageView.backgroundColor = .orange
         typeIconImageView.frame = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height)
         typeIconImageView.layer.cornerRadius = self.frame.height/2
+        typeIconImageView.image = imageForVehicleType(vehicle.type)
         
         directionsButton.addTarget(self, action: #selector(directionsButtonPressed), for: .touchUpInside)
         companyButton.addTarget(self, action: #selector(companyButtonPressed), for: .touchUpInside)
@@ -98,8 +99,23 @@ class VehicleListItem: UIView {
     }
     
     @objc private func companyButtonPressed (sender: UIButton!) -> Void {
+        var instagramHooks = "instagram://"
+        var instagramUrl = NSURL(string: instagramHooks)
+        switch lastVehicleUpdatedToShow!.company {
+        case .bird:
+            UIApplication.shared.openURL(URL(string: "bird://")!)
+        case .limeBike:
+            UIApplication.shared.openURL(URL(string: "Lime://")!)
+        default:
+            print("Oh No")
+        }
         print("LOGO BUTTON PRESSED")
     }
+    
+    
+    
+    
+    
     
     
     
