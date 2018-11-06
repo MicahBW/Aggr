@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("START")
         
-        makeAPICall(ofLocation: CLLC2D)
+        initAPICall(ofLocation: CLLC2D)
                 
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             //print(getVehList()[0].location)
