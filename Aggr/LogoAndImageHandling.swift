@@ -96,7 +96,7 @@ func pinForVehicleTypeAndCompany(type: VehicleType, company: Company) -> UIImage
             returnImg = UIImage(named: "LimeScooterMarker")!
         }
     default:
-        returnImg = UIImage(named: "BikeMarker")!
+        returnImg = UIImage(named: "LimeBikeMarker")!
     }
     
     return imageWithImage(image: returnImg, scaledToSize: Constants.ImageHandling.Markers.markerSize)
