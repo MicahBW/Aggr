@@ -35,9 +35,9 @@ func imageForVehicleType(_ type: VehicleType) -> UIImage {
     case .bike:
         return #imageLiteral(resourceName: "BikeIcon");
     case .scooter:
-        return #imageLiteral(resourceName: "ScooterIcon")
+        return #imageLiteral(resourceName: "ScooterIcon");
     default:
-        return #imageLiteral(resourceName: "UnkIcon")
+        return #imageLiteral(resourceName: "BikeIcon");
     }
 }
 
@@ -51,8 +51,10 @@ func logoForCompany(_ company : Company) -> UIImage {
         companyLogo = #imageLiteral(resourceName: "BirdIcon")
     case Company.limeBike:
         companyLogo = #imageLiteral(resourceName: "LimeBikeIcon")
+    case Company.jump:
+        companyLogo = #imageLiteral(resourceName: "JumpBikeIcon")
     default:
-        companyLogo = #imageLiteral(resourceName: "UnkIcon")
+        companyLogo = #imageLiteral(resourceName: "LimeBikeIcon")
     }
     
     return companyLogo
@@ -66,8 +68,10 @@ func colorForCompany(_ company: Company) -> UIColor {
         col = .white
     case Company.limeBike:
         col = .green
-    default:
+    case Company.jump:
         col = .red
+    default:
+        col = .blue
     }
     
     return col
@@ -80,7 +84,11 @@ func pinForVehicleTypeAndCompany(type: VehicleType, company: Company) -> UIImage
     var returnImg : UIImage
     switch type {
     case VehicleType.bike:
-        returnImg = UIImage(named: "LimeBikeMarker")!
+        if company == Company.jump {
+            returnImg = UIImage(named: "JumpBikeMarker")!
+        } else {
+            returnImg = UIImage(named: "LimeBikeMarker")!
+        }
     case VehicleType.scooter:
         if company == Company.bird {
             returnImg = UIImage(named: "BirdScooterMarker")!
@@ -126,6 +134,8 @@ func nameOfCompany(_ company: Company) -> String {
         return "Bird";
     case Company.ofo:
         return "Ofo";
+    case Company.jump:
+        return "Jump";
     case Company.limeBike:
         return "Lime";
     default:

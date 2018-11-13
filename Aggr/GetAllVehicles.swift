@@ -390,6 +390,9 @@ func makeAPICall(ofLocation location: CLLocationCoordinate2D){
             case "Ofo":
                 companyObject = Company.ofo
                 break
+            case "Jump":
+                companyObject = Company.jump
+                break
             default:
                 companyObject = Company.limeBike
                 break
@@ -430,6 +433,9 @@ func initAPICall(ofLocation location: CLLocationCoordinate2D){
             case "Ofo":
                 companyObject = Company.ofo
                 break
+            case "Jump":
+                companyObject = Company.jump
+                break
             default:
                 companyObject = Company.limeBike
                 break
@@ -457,6 +463,9 @@ func initAPICall(ofLocation location: CLLocationCoordinate2D){
                     break
                 case "Ofo":
                     companyObject = Company.ofo
+                    break
+                case "Jump":
+                    companyObject = Company.jump
                     break
                 default:
                     companyObject = Company.limeBike
@@ -486,6 +495,9 @@ func initAPICall(ofLocation location: CLLocationCoordinate2D){
                 case "Ofo":
                     companyObject = Company.ofo
                     break
+                case "Jump":
+                    companyObject = Company.jump
+                    break
                 default:
                     companyObject = Company.limeBike
                     break
@@ -514,6 +526,9 @@ func initAPICall(ofLocation location: CLLocationCoordinate2D){
                 case "Ofo":
                     companyObject = Company.ofo
                     break
+                case "Jump":
+                    companyObject = Company.jump
+                    break
                 default:
                     companyObject = Company.limeBike
                     break
@@ -541,6 +556,9 @@ func initAPICall(ofLocation location: CLLocationCoordinate2D){
                     break
                 case "Ofo":
                     companyObject = Company.ofo
+                    break
+                case "Jump":
+                    companyObject = Company.jump
                     break
                 default:
                     companyObject = Company.limeBike

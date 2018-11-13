@@ -57,8 +57,18 @@ class VehicleListItem: UIView {
         distanceTextView.isEditable = false
         distanceTextView.backgroundColor = .clear
         distanceTextView.frame = CGRect(x: self.frame.height + 2 * margins, y: margins, width: dtvWidth, height: dtvHeight)
-        distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi"
-        distanceTextView.font = UIFont(name: "Copperplate-Bold", size: 24)
+        if (vehicle.company == Company.bird){
+        distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi " + "$1+0.15/min"
+        } else if (vehicle.company == Company.jump) {
+            distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi " + "$4/hr"
+        } else {
+            if (vehicle.type == VehicleType.bike) {
+                distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi " + "$2/hr"
+            } else {
+                distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi " + "$1+0.15/min"
+            }
+        }
+        distanceTextView.font = UIFont(name: "Copperplate-Bold", size: 14)
         distanceTextView.textColor = .white
         
         

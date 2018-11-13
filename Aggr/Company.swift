@@ -13,4 +13,5 @@ enum Company {
     case bird
     case limeBike
     case ofo
+    case jump
 }

@@ -13,15 +13,12 @@ import GooglePlaces
 
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
+    var alreadyDisplayed = Set<Vehicle>()
     var callCount = 0
     var encompassingView: UIView!
     var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var pullUpController = VehicleListViewController()
-    
-    //@IBOutlet weak var textbox: UITextView!
-    //xvar textbox : UITextView!
-    
     
     override func loadView() {
         
@@ -57,51 +54,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             self.pullUpController.addToList(newVehicles: Array(vehList).sorted(by: {$0.distanceFromUser < $1.distanceFromUser}))
         }
         
-
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     public func addBottomSheetView() {
-        
-        
-        //var pullUpController = VehicleListViewController()
-        
         addPullUpController(pullUpController, initialStickyPointOffset: 100, animated: true)
-        
-        
-        /*
-        var i1 = pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc1, company: .bird, type: .scooter, scooterInfo: nil))
-        
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-        pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            self.pullUpController.updateList(withVehicles: [Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .limeBike , type: .scooter, scooterInfo: nil)])
-            print("REPLACING")
-        }
-        */
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -109,13 +70,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         addBottomSheetView()
     }
     
-//    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
-//        print("in move")
-//        mapView.clear()
-//    }
-    
     func mapView(_ mapView: GMSMapView, idleAt cameraPosition: GMSCameraPosition) {
-        mapView.clear()
         print("in idle")
         print(callCount)
         callCount = callCount + 1;
@@ -126,26 +81,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             let vehList = getVehList()
             for veh in vehList {
-                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
-                thisMark.map = mapView
+                if(!self.alreadyDisplayed.contains(veh)){
+                    let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                    thisMark.map = mapView
+                    self.alreadyDisplayed.insert(veh)
+                }
             }
-            //self.pullUpController.addToList(newVehicles: Array(vehList))
             self.pullUpController.updateList(withVehicles: Array(vehList).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
-            //self.pullUpController.deleteAllListItems()
-            //pullUp
-            //self.pullUpController.addItemForVehicle(Vehicle(location: Constants.MapTesting.TestCoordinates.tc2, company: .bird, type: .scooter, scooterInfo: nil))
-
         }
     }
 }
-
-
-
-/*
-func putInAscendingOrder(_ inArray: [Vehicle]) -> [Vehicle] {
-    var ret = [Vehicle]()
-    //ret.insertA
-    
-    
-}
-*/
