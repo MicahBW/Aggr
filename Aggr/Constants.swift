@@ -87,5 +87,11 @@ struct Constants {
     
     
     
+    struct Splash {
+        public static let iconHieght : CGFloat = 195
+    }
+    
+    
+    
     
 }

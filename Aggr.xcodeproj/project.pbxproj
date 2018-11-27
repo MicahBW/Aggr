@@ -17,6 +17,12 @@
 		C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3024A522148945B0075928B /* LaunchScreen.storyboard */; };
 		C3024A5F2148945B0075928B /* AggrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A5E2148945B0075928B /* AggrTests.swift */; };
 		C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A692148945B0075928B /* AggrUITests.swift */; };
+		C30ED20421ADCA010008F842 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ED20221ADCA010008F842 /* SplashViewController.swift */; };
+		C30ED20521ADCA010008F842 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ED20221ADCA010008F842 /* SplashViewController.swift */; };
+		C30ED20621ADCA010008F842 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ED20221ADCA010008F842 /* SplashViewController.swift */; };
+		C30ED20B21ADCF170008F842 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ED20A21ADCF170008F842 /* SplashView.swift */; };
+		C30ED20C21ADCF170008F842 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ED20A21ADCF170008F842 /* SplashView.swift */; };
+		C30ED20D21ADCF170008F842 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ED20A21ADCF170008F842 /* SplashView.swift */; };
 		C319AD87218B8E47002167A5 /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319AD85218B8E47002167A5 /* VehicleListViewController.swift */; };
 		C319AD88218B8E47002167A5 /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319AD85218B8E47002167A5 /* VehicleListViewController.swift */; };
 		C319AD89218B8E47002167A5 /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319AD85218B8E47002167A5 /* VehicleListViewController.swift */; };
@@ -105,6 +111,8 @@
 		C3024A652148945B0075928B /* AggrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3024A692148945B0075928B /* AggrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggrUITests.swift; sourceTree = "<group>"; };
 		C3024A6B2148945B0075928B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C30ED20221ADCA010008F842 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = Aggr/SplashViewController.swift; sourceTree = SOURCE_ROOT; };
+		C30ED20A21ADCF170008F842 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C319AD85218B8E47002167A5 /* VehicleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewController.swift; sourceTree = "<group>"; };
 		C319AD86218B8E47002167A5 /* VehicleListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleListViewController.xib; sourceTree = "<group>"; };
 		C319ADB7218BA042002167A5 /* VehicleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListItem.swift; sourceTree = "<group>"; };
@@ -113,14 +121,14 @@
 		C34AA20F2162DA0500453B0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C35C536E2165B58700FBD032 /* GetAllVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllVehicles.swift; sourceTree = "<group>"; };
 		C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndImageHandling.swift; sourceTree = "<group>"; };
-		C3942985214ADC7A00AEB1E1 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		C3942985214ADC7A00AEB1E1 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Vehicle.swift; path = Aggr/Vehicle.swift; sourceTree = SOURCE_ROOT; };
 		C3942989214ADE4C00AEB1E1 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		C394298D214ADEC500AEB1E1 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
 		C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterData.swift; sourceTree = "<group>"; };
 		C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMarker.swift; sourceTree = "<group>"; };
 		C3C6D810218D732A00DA25FF /* PullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
-		C3FD6B102182454600AB8665 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		C3FD6B112182454600AB8665 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		C3FD6B102182454600AB8665 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		C3FD6B112182454600AB8665 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapViewController.xib; path = Aggr/MapViewController.xib; sourceTree = SOURCE_ROOT; };
 		D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D302CB1F0B2AB788A384C225 /* Pods-Aggr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aggr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aggr/Pods-Aggr.release.xcconfig"; sourceTree = "<group>"; };
 		E12BD497B9BF6A4CAD82DEC9 /* Pods-AggrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AggrTests/Pods-AggrTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,19 +200,12 @@
 		C3024A45214894590075928B /* Aggr */ = {
 			isa = PBXGroup;
 			children = (
-				C319AD9D218B94F8002167A5 /* VehicleListParts */,
 				C323E394217D32CF00015C6F /* Constants.swift */,
-				C3C6D810218D732A00DA25FF /* PullUpController.swift */,
 				C3024A46214894590075928B /* AppDelegate.swift */,
-				C3FD6B102182454600AB8665 /* MapViewController.swift */,
-				C3FD6B112182454600AB8665 /* MapViewController.xib */,
-				C3942985214ADC7A00AEB1E1 /* Vehicle.swift */,
-				C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */,
-				C35C536E2165B58700FBD032 /* GetAllVehicles.swift */,
-				C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */,
-				C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */,
-				C394298D214ADEC500AEB1E1 /* VehicleType.swift */,
-				C3942989214ADE4C00AEB1E1 /* Company.swift */,
+				C30ED20E21ADD86D0008F842 /* Splash */,
+				C319AD9D218B94F8002167A5 /* List */,
+				C30ED20121ADC85F0008F842 /* Map */,
+				C30ED20021ADC8220008F842 /* Vehicle Handling */,
 				C3024A502148945B0075928B /* Assets.xcassets */,
 				C3024A522148945B0075928B /* LaunchScreen.storyboard */,
 				C3024A552148945B0075928B /* Info.plist */,
@@ -232,7 +233,40 @@
 			path = AggrUITests;
 			sourceTree = "<group>";
 		};
-		C319AD9D218B94F8002167A5 /* VehicleListParts */ = {
+		C30ED20021ADC8220008F842 /* Vehicle Handling */ = {
+			isa = PBXGroup;
+			children = (
+				C3942985214ADC7A00AEB1E1 /* Vehicle.swift */,
+				C35C536E2165B58700FBD032 /* GetAllVehicles.swift */,
+				C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */,
+				C394298D214ADEC500AEB1E1 /* VehicleType.swift */,
+				C3942989214ADE4C00AEB1E1 /* Company.swift */,
+			);
+			path = "Vehicle Handling";
+			sourceTree = "<group>";
+		};
+		C30ED20121ADC85F0008F842 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C3C6D810218D732A00DA25FF /* PullUpController.swift */,
+				C3FD6B102182454600AB8665 /* MapViewController.swift */,
+				C3FD6B112182454600AB8665 /* MapViewController.xib */,
+				C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */,
+				C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		C30ED20E21ADD86D0008F842 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C30ED20221ADCA010008F842 /* SplashViewController.swift */,
+				C30ED20A21ADCF170008F842 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		C319AD9D218B94F8002167A5 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				C319ADBB218CC3C3002167A5 /* VerticleLayout.swift */,
@@ -240,7 +274,7 @@
 				C319AD86218B8E47002167A5 /* VehicleListViewController.xib */,
 				C319ADB7218BA042002167A5 /* VehicleListItem.swift */,
 			);
-			path = VehicleListParts;
+			path = List;
 			sourceTree = "<group>";
 		};
 		C323E393217D2CDB00015C6F /* Recovered References */ = {
@@ -536,6 +570,7 @@
 				C39429A2214AE6DC00AEB1E1 /* ScooterData.swift in Sources */,
 				C319ADBC218CC3C3002167A5 /* VerticleLayout.swift in Sources */,
 				C3942986214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
+				C30ED20421ADCA010008F842 /* SplashViewController.swift in Sources */,
 				C319ADB8218BA042002167A5 /* VehicleListItem.swift in Sources */,
 				C319AD87218B8E47002167A5 /* VehicleListViewController.swift in Sources */,
 				C3024A4F214894590075928B /* Aggr.xcdatamodeld in Sources */,
@@ -549,6 +584,7 @@
 				C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C323E395217D32CF00015C6F /* Constants.swift in Sources */,
 				21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */,
+				C30ED20B21ADCF170008F842 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +595,7 @@
 				C3942987214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C319ADBD218CC3C3002167A5 /* VerticleLayout.swift in Sources */,
 				C319AD88218B8E47002167A5 /* VehicleListViewController.swift in Sources */,
+				C30ED20521ADCA010008F842 /* SplashViewController.swift in Sources */,
 				C319ADB9218BA042002167A5 /* VehicleListItem.swift in Sources */,
 				C3DFDEC92188C2B8006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A5F2148945B0075928B /* AggrTests.swift in Sources */,
@@ -572,6 +609,7 @@
 				C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C3DFDEBF2188BD80006F9CC8 /* Constants.swift in Sources */,
 				C3DFDEC72188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
+				C30ED20C21ADCF170008F842 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +620,7 @@
 				C3942988214ADC7A00AEB1E1 /* Vehicle.swift in Sources */,
 				C319ADBE218CC3C3002167A5 /* VerticleLayout.swift in Sources */,
 				C319AD89218B8E47002167A5 /* VehicleListViewController.swift in Sources */,
+				C30ED20621ADCA010008F842 /* SplashViewController.swift in Sources */,
 				C319ADBA218BA042002167A5 /* VehicleListItem.swift in Sources */,
 				C3DFDECA2188C2B9006F9CC8 /* AppDelegate.swift in Sources */,
 				C3024A6A2148945B0075928B /* AggrUITests.swift in Sources */,
@@ -595,6 +634,7 @@
 				C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C3DFDEC02188BD81006F9CC8 /* Constants.swift in Sources */,
 				C3DFDEC82188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
+				C30ED20D21ADCF170008F842 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,14 +34,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(Constants.GMSHandling.APIKey)
         GMSPlacesClient.provideAPIKey(Constants.GMSHandling.APIKey)
         
+        //MARK: Splash
+        let splashController = SplashViewController()
+        let navSplashController = UINavigationController(rootViewController: splashController)
+        window?.rootViewController = navSplashController
+        navSplashController.setNavigationBarHidden(true, animated: false)
+        
+        
         // MARK: Handling controller
         let controller = MapViewController()
         let navigationController = UINavigationController(rootViewController: controller)
-        window?.rootViewController = navigationController
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.window?.rootViewController = navigationController
+        }
         
         // Hide the status bar
         navigationController.setNavigationBarHidden(true, animated: true)
-        
         
         print("test")
         
@@ -49,8 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let lat: Double = 38.89509248686296
         let long: Double = -77.03707623761149
         let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
-        
-        print("START")
         
         initAPICall(ofLocation: CLLC2D)
                 
