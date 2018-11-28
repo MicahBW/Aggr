@@ -57,8 +57,9 @@ class VehicleMarker : GMSMarker {
         self.position = self.vehicle.location
         //self.icon = VehicleMarkerStyle(forVehicle: self.vehicle).icon
         self.icon = markerIcon
-
         
+        self.title = nameOfCompany( self.vehicle.company)
+        self.snippet = String( self.vehicle.location.latitude.description ) + ", " +  String (self.vehicle.location.longitude.description )
         
     }
     

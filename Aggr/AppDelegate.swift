@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let controller = MapViewController()
         let navigationController = UINavigationController(rootViewController: controller)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.window?.rootViewController = navigationController
         }
         
