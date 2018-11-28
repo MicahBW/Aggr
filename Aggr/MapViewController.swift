@@ -28,17 +28,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         
         
-        do {
-            // Set the map style by passing the URL of the local file.
-            if let styleURL = Bundle.main.url(forResource: "night_mode", withExtension: "json") {
-                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-            } else {
-                NSLog("Unable to find style.json")
-            }
-        } catch {
-            NSLog("One or more of the map styles failed to load. \(error)")
-        }
-        
+        mapView.StylizeForStyleMode(mode: MapStyleModes.Christmas)
         
         
         self.view = mapView
@@ -105,4 +95,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             self.pullUpController.updateList(withVehicles: Array(vehList).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
         }
     }
+    
 }
+
+
+

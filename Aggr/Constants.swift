@@ -93,5 +93,23 @@ struct Constants {
     
     
     
+    struct MapStyles {
+        
+        public static func filename(forMapStyle style : MapStyleModes) -> String {
+            switch style {
+            case .Day:
+                return "day_mode"
+            case .Night:
+                return "night_mode"
+            case .Christmas:
+                return "christmas_mode"
+            default:
+                return "day_mode"
+            }
+        }
+        
+    }
+    
+    
     
 }

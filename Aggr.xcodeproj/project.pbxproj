@@ -60,6 +60,12 @@
 		C3AA821621AF2BB50021F3EF /* night_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AA821521AF2BB50021F3EF /* night_mode.json */; };
 		C3AA821721AF2BB50021F3EF /* night_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AA821521AF2BB50021F3EF /* night_mode.json */; };
 		C3AA821821AF2BB50021F3EF /* night_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AA821521AF2BB50021F3EF /* night_mode.json */; };
+		C3AA821B21AF30350021F3EF /* christmas_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AA821A21AF30350021F3EF /* christmas_mode.json */; };
+		C3AA821C21AF30350021F3EF /* christmas_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AA821A21AF30350021F3EF /* christmas_mode.json */; };
+		C3AA821D21AF30350021F3EF /* christmas_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AA821A21AF30350021F3EF /* christmas_mode.json */; };
+		C3AA821F21AF341E0021F3EF /* MapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA821E21AF341E0021F3EF /* MapStyle.swift */; };
+		C3AA822021AF341E0021F3EF /* MapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA821E21AF341E0021F3EF /* MapStyle.swift */; };
+		C3AA822121AF341E0021F3EF /* MapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA821E21AF341E0021F3EF /* MapStyle.swift */; };
 		C3C6D811218D732A00DA25FF /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6D810218D732A00DA25FF /* PullUpController.swift */; };
 		C3C6D812218D732A00DA25FF /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6D810218D732A00DA25FF /* PullUpController.swift */; };
 		C3C6D813218D732A00DA25FF /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C6D810218D732A00DA25FF /* PullUpController.swift */; };
@@ -130,6 +136,8 @@
 		C39429A1214AE6DC00AEB1E1 /* ScooterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterData.swift; sourceTree = "<group>"; };
 		C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMarker.swift; sourceTree = "<group>"; };
 		C3AA821521AF2BB50021F3EF /* night_mode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = night_mode.json; sourceTree = "<group>"; };
+		C3AA821A21AF30350021F3EF /* christmas_mode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = christmas_mode.json; sourceTree = "<group>"; };
+		C3AA821E21AF341E0021F3EF /* MapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyle.swift; sourceTree = "<group>"; };
 		C3C6D810218D732A00DA25FF /* PullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
 		C3FD6B102182454600AB8665 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		C3FD6B112182454600AB8665 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapViewController.xib; path = Aggr/MapViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -255,6 +263,7 @@
 			children = (
 				C3C6D810218D732A00DA25FF /* PullUpController.swift */,
 				C3FD6B102182454600AB8665 /* MapViewController.swift */,
+				C3AA821E21AF341E0021F3EF /* MapStyle.swift */,
 				C3FD6B112182454600AB8665 /* MapViewController.xib */,
 				C39429A5214B1D0D00AEB1E1 /* VehicleMarker.swift */,
 				C35F6E12215C28BD00F01F13 /* LogoAndImageHandling.swift */,
@@ -294,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				C3AA821521AF2BB50021F3EF /* night_mode.json */,
+				C3AA821A21AF30350021F3EF /* christmas_mode.json */,
 			);
 			name = "Map Styles";
 			path = "New Group";
@@ -423,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */,
+				C3AA821B21AF30350021F3EF /* christmas_mode.json in Resources */,
 				C3024A512148945B0075928B /* Assets.xcassets in Resources */,
 				C3AA821621AF2BB50021F3EF /* night_mode.json in Resources */,
 				C3FD6B152182454600AB8665 /* MapViewController.xib in Resources */,
@@ -434,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AA821C21AF30350021F3EF /* christmas_mode.json in Resources */,
 				C3FD6B162182454600AB8665 /* MapViewController.xib in Resources */,
 				C3AA821721AF2BB50021F3EF /* night_mode.json in Resources */,
 				C3DFDEC52188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */,
@@ -445,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AA821D21AF30350021F3EF /* christmas_mode.json in Resources */,
 				C3FD6B172182454600AB8665 /* MapViewController.xib in Resources */,
 				C3AA821821AF2BB50021F3EF /* night_mode.json in Resources */,
 				C3DFDEC62188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */,
@@ -600,6 +613,7 @@
 				C3024A47214894590075928B /* AppDelegate.swift in Sources */,
 				C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C323E395217D32CF00015C6F /* Constants.swift in Sources */,
+				C3AA821F21AF341E0021F3EF /* MapStyle.swift in Sources */,
 				21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */,
 				C30ED20B21ADCF170008F842 /* SplashView.swift in Sources */,
 			);
@@ -625,6 +639,7 @@
 				C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C3DFDEBF2188BD80006F9CC8 /* Constants.swift in Sources */,
+				C3AA822021AF341E0021F3EF /* MapStyle.swift in Sources */,
 				C3DFDEC72188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
 				C30ED20C21ADCF170008F842 /* SplashView.swift in Sources */,
 			);
@@ -650,6 +665,7 @@
 				C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C3DFDEC02188BD81006F9CC8 /* Constants.swift in Sources */,
+				C3AA822121AF341E0021F3EF /* MapStyle.swift in Sources */,
 				C3DFDEC82188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
 				C30ED20D21ADCF170008F842 /* SplashView.swift in Sources */,
 			);
