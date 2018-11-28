@@ -37,6 +37,7 @@ struct VehicleMarkerStyle {
 
 
 
+
 class VehicleMarker : GMSMarker {
     
     var vehicle : Vehicle

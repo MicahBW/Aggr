@@ -26,6 +26,21 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 38.89509248686296, longitude: -77.03707623761149, zoom: 15)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         mapView.delegate = self
+        
+        
+        do {
+            // Set the map style by passing the URL of the local file.
+            if let styleURL = Bundle.main.url(forResource: "night_mode", withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                NSLog("Unable to find style.json")
+            }
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
+        
+        
+        
         self.view = mapView
         
         locationManager.requestWhenInUseAuthorization()
