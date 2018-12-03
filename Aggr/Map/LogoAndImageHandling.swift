@@ -28,8 +28,6 @@ extension UIImageView {
     
 }
 
-
-
 func imageForVehicleType(_ type: VehicleType) -> UIImage {
     switch type {
     case .bike:
@@ -138,8 +136,6 @@ func nameOfCompany(_ company: Company) -> String {
         return "Jump";
     case Company.limeBike:
         return "Lime";
-    default:
-        return "Unknown";
     }
 }
 

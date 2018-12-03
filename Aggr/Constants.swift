@@ -104,7 +104,7 @@ struct Constants {
             case .Christmas:
                 return "christmas_mode"
             default:
-                return "day_mode"
+                return "night_mode"
             }
         }
         

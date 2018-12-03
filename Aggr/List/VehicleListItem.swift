@@ -15,15 +15,12 @@ class VehicleListItem: UIView {
     let dtvHeight : CGFloat = 27
     let dtvWidth : CGFloat = 150
 
-    
-    
     var companyButton : UIButton
     var distanceTextView: UITextView
     var directionsButton: UIButton
     var typeIconImageView: UIImageView
     
     var lastVehicleUpdatedToShow : Vehicle? = nil
-    
     
     override init(frame: CGRect) {
         companyButton = UIButton()
@@ -49,13 +46,15 @@ class VehicleListItem: UIView {
         companyButton.frame = CGRect(x: 0, y: 0, width: self.frame.height, height: self.frame.height)
         companyButton.setImage(logoForCompany(vehicle.company), for: .normal)
         companyButton.layer.cornerRadius = self.frame.height/2
-        
+        companyButton.imageView?.contentMode = .scaleAspectFit
+        companyButton.imageEdgeInsets = UIEdgeInsetsMake(5.0, 0.0, 5.0, 0.0)
         
         // distanceTextView
         addSubview(distanceTextView)
         distanceTextView.isSelectable = false
         distanceTextView.isEditable = false
         distanceTextView.backgroundColor = .clear
+        distanceTextView.isScrollEnabled = false
         distanceTextView.frame = CGRect(x: self.frame.height + 2 * margins, y: margins, width: dtvWidth, height: dtvHeight)
         if (vehicle.company == Company.bird){
         distanceTextView.text = String(vehicle.distanceFromUser.truncate(places: 1)) + " mi " + "$1+0.15/min"
@@ -85,7 +84,6 @@ class VehicleListItem: UIView {
         typeIconImageView.frame = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height)
         typeIconImageView.layer.cornerRadius = self.frame.height/2
         typeIconImageView.image = imageForVehicleType(vehicle.type)
-        
         directionsButton.addTarget(self, action: #selector(directionsButtonPressed), for: .touchUpInside)
         companyButton.addTarget(self, action: #selector(companyButtonPressed), for: .touchUpInside)
     
@@ -102,44 +100,23 @@ class VehicleListItem: UIView {
     }
     
     @objc private func directionsButtonPressed (sender: UIButton!) -> Void {
-        print("DIRECTIONS BUTTON PRESSED")
         if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(lastVehicleUpdatedToShow!.location.latitude),\(lastVehicleUpdatedToShow!.location.longitude)&directionsmode=walking") {
             UIApplication.shared.open(url, options: [:])
         }
     }
     
     @objc private func companyButtonPressed (sender: UIButton!) -> Void {
-        var instagramHooks = "instagram://"
-        var instagramUrl = NSURL(string: instagramHooks)
         switch lastVehicleUpdatedToShow!.company {
         case .bird:
             UIApplication.shared.openURL(URL(string: "bird://")!)
         case .limeBike:
-            UIApplication.shared.openURL(URL(string: "Lime://")!)
+            UIApplication.shared.openURL(URL(string: "limebike://")!)
+        case .jump:
+            UIApplication.shared.openURL(URL(string: "jump://")!)
         default:
-            print("Oh No")
+            print("Error: Company Button Does Not Exist")
         }
-        print("LOGO BUTTON PRESSED")
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
-
-
-/*
- // Only override draw() if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- override func draw(_ rect: CGRect) {
- // Drawing code
- }
- */
 

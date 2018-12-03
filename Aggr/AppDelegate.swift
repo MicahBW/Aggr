@@ -52,19 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Hide the status bar
         navigationController.setNavigationBarHidden(true, animated: true)
         
-        print("test")
-        
-        
         let lat: Double = 38.89509248686296
         let long: Double = -77.03707623761149
         let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
-        
         initAPICall(ofLocation: CLLC2D)
-                
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            //print(getVehList()[0].location)
-        }
-        //print("test2")
         
         // TODO: - Add setup here
         

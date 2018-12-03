@@ -11,9 +11,9 @@ import GoogleMaps
 import CoreLocation
 import UIKit
 
-//https://developers.google.com/maps/documentation/android-sdk/marker
+// Reference: https://developers.google.com/maps/documentation/android-sdk/marker
 
-//https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker
+// Reference: https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker
 
 
 struct VehicleMarkerStyle {
@@ -23,20 +23,8 @@ struct VehicleMarkerStyle {
     
     init (forCompany company: Company, andVehicleType vehicleType: VehicleType) {
         icon = pinForVehicleTypeAndCompany(type: vehicleType, company: company)
-        //color = colorForCompany(company)
     }
-    /*
-    init (forVehicle vehicle: Vehicle) {
-        icon = logoForVehicleTypeAndCompany(type: vehicle.type, company: company)
-        //color = colorForCompany(vehicle.company)
-    }
- */
 }
-
-
-
-
-
 
 class VehicleMarker : GMSMarker {
     
@@ -56,22 +44,26 @@ class VehicleMarker : GMSMarker {
         // Add vehicle-specific info
         
         self.position = self.vehicle.location
-        //self.icon = VehicleMarkerStyle(forVehicle: self.vehicle).icon
         self.icon = markerIcon
         
         self.title = nameOfCompany( self.vehicle.company)
-        self.snippet = String( self.vehicle.location.latitude.description ) + ", " +  String (self.vehicle.location.longitude.description )
-        
+        var vehType = ""
+        switch(self.vehicle.type) {
+        case VehicleType.bike:
+            vehType = "Bike"
+        case VehicleType.scooter:
+            // Add this line when battery is available vehType = "Scooter\nBattery Level: " + String(vehicle.scooterInfo!.batteryCharge) + "%"
+            vehType = "Scooter\nBattery Level: Unknown"
+        default:
+            vehType = "Bike"
+        }
+        let snip = "Type: " + vehType
+        self.snippet = snip
     }
     
     
     var markerIcon : UIImage {
         let retIcon = pinForVehicleTypeAndCompany(type: vehicle.type, company: vehicle.company)
-        //retIcon.tint(color: UIColor.yellow)s
-        //UIImageView.tintColor = UIColor.yellow
-        //let myimage = retIcon.withRenderingMode(.alwaysTemplate)
-        //return retIcon.tint(color: UIColor.yellow)
-        //return retIcon.tinted(color: UIColor.purple)
         return retIcon;
     }
     

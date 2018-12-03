@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import UIKit
+import GoogleMaps
 
 /// A class representing a vehicle, complete with location, the owning company, the type of vehicle, and the scooterData if it is a scooter
 class Vehicle: Equatable, Hashable {
@@ -35,18 +36,8 @@ class Vehicle: Equatable, Hashable {
         self.company = company
         self.type = type
         self.scooterInfo = scooterInfo
-        let rand : [Float] = [0.1,0.2,0.3,0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
-        
-        let randChoice = rand.randomElement()
-        self.distance = CLLocationDistance(randChoice!)
-        
+        self.distance = 0.0
     }
-    
-    /*
-     var tableViewCell : VehicleTableViewCell {
-     return VehicleTableViewCell(providingCompany: self.owner, style: UITableViewCellStyle.default, reuseIdentifier: nil)
-     }
-     */
     
     var hashValue: Int {
         get {
@@ -54,23 +45,8 @@ class Vehicle: Equatable, Hashable {
         }
     }
     
-    // TODO: Function to make a marker.
-    
-    
-    
     var distanceFromUser : CLLocationDistance {
-        let userloc = CLLocation()
-        //return userloc.distance(from: CLLocation(latitude: location.latitude, longitude: location.longitude))
-        /*let rand : [Float] = [0.1,0.2,0.3,0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
-        
-        let randChoice = rand.randomElement()
-        return CLLocationDistance(randChoice!)*/
-        
         return self.distance
     }
-    
-    
-    //func isCloserThan()
-    
-    
+
 }
