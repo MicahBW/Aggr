@@ -77,6 +77,9 @@
 		C3DFDEC82188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F36FDC216BD70C00DE5067 /* SetupBirdVehicles.swift */; };
 		C3DFDEC92188C2B8006F9CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A46214894590075928B /* AppDelegate.swift */; };
 		C3DFDECA2188C2B9006F9CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3024A46214894590075928B /* AppDelegate.swift */; };
+		C3FD024621B73A6400FB2DB5 /* day_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3FD024521B73A6400FB2DB5 /* day_mode.json */; };
+		C3FD024721B73A6400FB2DB5 /* day_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3FD024521B73A6400FB2DB5 /* day_mode.json */; };
+		C3FD024821B73A6400FB2DB5 /* day_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3FD024521B73A6400FB2DB5 /* day_mode.json */; };
 		C3FD6B122182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
 		C3FD6B132182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
 		C3FD6B142182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
@@ -139,6 +142,7 @@
 		C3AA821A21AF30350021F3EF /* christmas_mode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = christmas_mode.json; sourceTree = "<group>"; };
 		C3AA821E21AF341E0021F3EF /* MapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyle.swift; sourceTree = "<group>"; };
 		C3C6D810218D732A00DA25FF /* PullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
+		C3FD024521B73A6400FB2DB5 /* day_mode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = day_mode.json; sourceTree = "<group>"; };
 		C3FD6B102182454600AB8665 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		C3FD6B112182454600AB8665 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapViewController.xib; path = Aggr/MapViewController.xib; sourceTree = SOURCE_ROOT; };
 		D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,6 +306,7 @@
 		C3AA821921AF2BC20021F3EF /* Map Styles */ = {
 			isa = PBXGroup;
 			children = (
+				C3FD024521B73A6400FB2DB5 /* day_mode.json */,
 				C3AA821521AF2BB50021F3EF /* night_mode.json */,
 				C3AA821A21AF30350021F3EF /* christmas_mode.json */,
 			);
@@ -433,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3024A542148945B0075928B /* LaunchScreen.storyboard in Resources */,
+				C3FD024621B73A6400FB2DB5 /* day_mode.json in Resources */,
 				C3AA821B21AF30350021F3EF /* christmas_mode.json in Resources */,
 				C3024A512148945B0075928B /* Assets.xcassets in Resources */,
 				C3AA821621AF2BB50021F3EF /* night_mode.json in Resources */,
@@ -446,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AA821C21AF30350021F3EF /* christmas_mode.json in Resources */,
+				C3FD024721B73A6400FB2DB5 /* day_mode.json in Resources */,
 				C3FD6B162182454600AB8665 /* MapViewController.xib in Resources */,
 				C3AA821721AF2BB50021F3EF /* night_mode.json in Resources */,
 				C3DFDEC52188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */,
@@ -458,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AA821D21AF30350021F3EF /* christmas_mode.json in Resources */,
+				C3FD024821B73A6400FB2DB5 /* day_mode.json in Resources */,
 				C3FD6B172182454600AB8665 /* MapViewController.xib in Resources */,
 				C3AA821821AF2BB50021F3EF /* night_mode.json in Resources */,
 				C3DFDEC62188C2A6006F9CC8 /* LaunchScreen.storyboard in Resources */,

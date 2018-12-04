@@ -19,8 +19,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var locationManager = CLLocationManager()
     var pullUpController = VehicleListViewController()
     
+    var buttonTaps : Int = 0
+    
+    
     override func loadView() {
-        
+    
         // deal with GMS
         let camera = GMSCameraPosition.camera(withLatitude: 38.89509248686296, longitude: -77.03707623761149, zoom: 15)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
@@ -54,7 +57,60 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
         
         
+        
+        //MARK: -  TESTING BUTTON
+        /*
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        button.backgroundColor = .green
+        button.setTitle("Test Button", for: .normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        self.view.addSubview(button)
+        
+        */
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Christmas)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Day)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Night)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Christmas)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Day)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 18) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Night)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 21) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Christmas)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 24) {
+            mapView.StylizeForStyleMode(mode: MapStyleModes.Day)
+        }
+        
+        
+        
+        
+        
     }
+    /*
+    
+    @objc func buttonAction(sender: UIButton!) {
+        
+        
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +147,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             self.pullUpController.updateList(withVehicles: Array(vehList).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
         }
     }
+    
+    
+    
     
 }
 
