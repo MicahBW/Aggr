@@ -19,7 +19,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var locationManager = CLLocationManager()
     var pullUpController = VehicleListViewController()
     
-    var buttonTaps : Int = 0
+    //var showState
     
     
     override func loadView() {
@@ -58,16 +58,17 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         
         
-        //MARK: -  TESTING BUTTON
+        //MARK: -  Cycle BUTTON
+        
         /*
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        button.backgroundColor = .green
-        button.setTitle("Test Button", for: .normal)
+        let button = UIButton(frame: CGRect(x: 50, y: 600, width: 100, height: 50))
+        button.backgroundColor = .blue
+        button.setTitle("", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
+        button.layer.cornerRadius = 20
         self.view.addSubview(button)
-        
         */
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             mapView.StylizeForStyleMode(mode: MapStyleModes.Christmas)
         }
@@ -105,12 +106,25 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         
     }
-    /*
+    
     
     @objc func buttonAction(sender: UIButton!) {
         
+        changeShowMode([VehicleType.bike])
         
-    }*/
+        
+    }
+    
+    
+    func changeShowMode(_ typesToShow : [VehicleType]) {
+        mapView.clear()
+        for veh in vehList {
+            if typesToShow.contains(veh.type){
+                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                thisMark.map = mapView
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
