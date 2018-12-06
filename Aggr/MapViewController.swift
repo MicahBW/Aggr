@@ -19,8 +19,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var locationManager = CLLocationManager()
     var pullUpController = VehicleListViewController()
     var sortState: String = "Both"
-    
-    let tws = ThreeWaySwitch(frame: CGRect(x: 16, y: 670, width: 80, height: 35))
+    let tws = ThreeWaySwitch(frame: CGRect(x: 7, y: 648, width: 130, height: 50))
     
     //var showState
     
@@ -124,6 +123,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         tws.didGoRightAction = onlyScooters
         tws.didGoLeftAction = onlyBikes
         tws.didGoMiddleAction = bothBikesAndScooters
+        
+        tws.selectorColor = .clear
+        tws.selectorView.layer.borderWidth = 3
+        tws.selectorView.layer.borderColor = UIColor(red:0.44, green:0.74, blue:0.98, alpha:1.0).cgColor
+        
         
         
         

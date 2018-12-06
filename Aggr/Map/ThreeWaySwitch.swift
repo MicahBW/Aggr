@@ -26,7 +26,7 @@ class ThreeWaySwitch : UIControl {
     //MARK: - Variables
     public var slideTime : TimeInterval = 1;
     public var testing : Bool = true
-    private var selectorBoundries : CGFloat = 2;
+    private var selectorBoundries : CGFloat = 1;
     public var leftView : UIImageView = UIImageView()
     public var middleView : UIImageView = UIImageView()
     public var rightView : UIImageView = UIImageView()
@@ -39,6 +39,24 @@ class ThreeWaySwitch : UIControl {
         didSet {
             changePosition(to: currentSelectorPosition);
             runDidGoUserDefinedAction(forNewPosition: currentSelectorPosition)
+        }
+    }
+    
+    
+    /// Provides an easy way to change the background color of all three sections
+    public var backColor : UIColor = .white {
+        didSet {
+            leftView.backgroundColor = backColor
+            middleView.backgroundColor = backColor
+            rightView.backgroundColor = backColor
+        }
+    }
+    
+    
+    /// Provides an easy way to change the background color of the selector
+    public var selectorColor : UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1) {
+        didSet {
+            selectorView.backgroundColor = selectorColor
         }
     }
     //TODO: Add functionality like currentSelectorPosition but for setting ang getting shadows and stuff
@@ -75,8 +93,6 @@ class ThreeWaySwitch : UIControl {
     private func commonInit() {
         
         
-        backgroundColor = .blue
-        
         // Get the width and the height of the TWS
         let entireSwitchWidth = frame.width
         let entireSwitchHeight = frame.height
@@ -89,10 +105,10 @@ class ThreeWaySwitch : UIControl {
         
         
         // Set the background colors for testing
-        leftView.backgroundColor = .green
-        middleView.backgroundColor = .green
-        rightView.backgroundColor = .green
-        selectorView.backgroundColor = .white
+        leftView.backgroundColor = backColor
+        middleView.backgroundColor = backColor
+        rightView.backgroundColor = backColor
+        selectorView.backgroundColor = selectorColor
         
         
         // Dealing with rounding corners
