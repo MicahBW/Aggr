@@ -18,6 +18,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var pullUpController = VehicleListViewController()
+    var sortState: String = "Both"
     
     let tws = ThreeWaySwitch(frame: CGRect(x: 16, y: 670, width: 80, height: 35))
     
@@ -28,7 +29,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
         // deal with GMS
         let camera = GMSCameraPosition.camera(withLatitude: 38.89509248686296, longitude: -77.03707623761149, zoom: 15)
-        let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+        mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         mapView.delegate = self
         mapView.padding.bottom = 100
         mapView.StylizeForStyleMode(mode: MapStyleModes.Night)
@@ -57,7 +58,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             let vehList = getVehList()
             for veh in vehList {
                 let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
-                thisMark.map = mapView
+                thisMark.map = self.mapView
             }
             self.pullUpController.addToList(newVehicles: Array(vehList).sorted(by: {$0.distanceFromUser < $1.distanceFromUser}))
         }
@@ -120,31 +121,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         self.view.addSubview(tws)
         self.view.bringSubview(toFront: tws)
         
-        
-        
+        tws.didGoRightAction = onlyScooters
+        tws.didGoLeftAction = onlyBikes
+        tws.didGoMiddleAction = bothBikesAndScooters
         
         
         
     }
     
-    
-    @objc func buttonAction(sender: UIButton!) {
-        
-        changeShowMode([VehicleType.bike])
-        
-        
-    }
-    
-    
-    func changeShowMode(_ typesToShow : [VehicleType]) {
-        mapView.clear()
-        for veh in vehList {
-            if typesToShow.contains(veh.type){
-                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
-                thisMark.map = mapView
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -163,26 +147,108 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let lat: Double = cameraPosition.target.latitude
         let long: Double = cameraPosition.target.longitude
         let CLLC2D: CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: lat, longitude: long)
+        var vehListSort: [Vehicle] = []
         makeAPICall(ofLocation: CLLC2D)
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             let vehList = getVehList()
-            for veh in vehList {
-                let coordinatePin = CLLocation(latitude: veh.location.latitude, longitude: veh.location.longitude)
-                let coordinateCamera = CLLocation(latitude: cameraPosition.target.latitude, longitude: cameraPosition.target.longitude)
-                let distanceInMeters = coordinatePin.distance(from: coordinateCamera) // result is in meters
-                let distanceInMiles = distanceInMeters/1609.344
-                veh.distance = distanceInMiles
-                if(!self.alreadyDisplayed.contains(veh)){
-                    let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
-                    thisMark.map = mapView
-                    self.alreadyDisplayed.insert(veh)
+            if (self.sortState == "Scooters") {
+                for veh in vehList {
+                    let coordinatePin = CLLocation(latitude: veh.location.latitude, longitude: veh.location.longitude)
+                    let coordinateCamera = CLLocation(latitude: cameraPosition.target.latitude, longitude: cameraPosition.target.longitude)
+                    let distanceInMeters = coordinatePin.distance(from: coordinateCamera) // result is in meters
+                    let distanceInMiles = distanceInMeters/1609.344
+                    veh.distance = distanceInMiles
+                    if(!self.alreadyDisplayed.contains(veh) && (veh.type == VehicleType.scooter)){
+                        let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                        thisMark.map = mapView
+                        self.alreadyDisplayed.insert(veh)
+                        vehListSort.append(veh)
+                    }
+                }
+            } else if (self.sortState == "Bikes") {
+                for veh in vehList {
+                    let coordinatePin = CLLocation(latitude: veh.location.latitude, longitude: veh.location.longitude)
+                    let coordinateCamera = CLLocation(latitude: cameraPosition.target.latitude, longitude: cameraPosition.target.longitude)
+                    let distanceInMeters = coordinatePin.distance(from: coordinateCamera) // result is in meters
+                    let distanceInMiles = distanceInMeters/1609.344
+                    veh.distance = distanceInMiles
+                    if(!self.alreadyDisplayed.contains(veh) && (veh.type == VehicleType.bike)){
+                        let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                        thisMark.map = mapView
+                        self.alreadyDisplayed.insert(veh)
+                        vehListSort.append(veh)
+                    }
+                }
+            } else {
+                for veh in vehList {
+                    let coordinatePin = CLLocation(latitude: veh.location.latitude, longitude: veh.location.longitude)
+                    let coordinateCamera = CLLocation(latitude: cameraPosition.target.latitude, longitude: cameraPosition.target.longitude)
+                    let distanceInMeters = coordinatePin.distance(from: coordinateCamera) // result is in meters
+                    let distanceInMiles = distanceInMeters/1609.344
+                    veh.distance = distanceInMiles
+                    if(!self.alreadyDisplayed.contains(veh)){
+                        let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                        thisMark.map = mapView
+                        self.alreadyDisplayed.insert(veh)
+                        vehListSort.append(veh)
+                    }
                 }
             }
-            self.pullUpController.updateList(withVehicles: Array(vehList).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
+            self.pullUpController.updateList(withVehicles: Array(vehListSort).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
         }
     }
     
+    func onlyScooters() -> Void {
+        sortState = "Scooters"
+        mapView.clear()
+        let vehList = getVehList()
+        var vehListOnlyScooters: [Vehicle] = []
+        self.alreadyDisplayed = Set.init()
+        for veh in vehList {
+            if(!self.alreadyDisplayed.contains(veh) && (veh.type == VehicleType.scooter)){
+                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                thisMark.map = mapView
+                self.alreadyDisplayed.insert(veh)
+                vehListOnlyScooters.append(veh)
+            }
+        }
+        
+        self.pullUpController.updateList(withVehicles: Array(vehListOnlyScooters).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
+    }
     
+    func onlyBikes() -> Void {
+        sortState = "Bikes"
+        mapView.clear()
+        let vehList = getVehList()
+        var vehListOnlyBikes: [Vehicle] = []
+        self.alreadyDisplayed = Set.init()
+        for veh in vehList {
+            if(!self.alreadyDisplayed.contains(veh) && (veh.type != VehicleType.scooter)){
+                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                thisMark.map = mapView
+                self.alreadyDisplayed.insert(veh)
+                vehListOnlyBikes.append(veh)
+            }
+        }
+        
+        self.pullUpController.updateList(withVehicles: Array(vehListOnlyBikes).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
+    }
+    
+    func bothBikesAndScooters() -> Void {
+        sortState = "Both"
+        mapView.clear()
+        let vehList = getVehList()
+        self.alreadyDisplayed = Set.init()
+        for veh in vehList {
+            if(!self.alreadyDisplayed.contains(veh)){
+                let thisMark : VehicleMarker = VehicleMarker(forVehicle: veh)
+                thisMark.map = mapView
+                self.alreadyDisplayed.insert(veh)
+            }
+        }
+        
+        self.pullUpController.updateList(withVehicles: Array(vehList).sorted(by: {Float($0.distanceFromUser) < Float($1.distanceFromUser)}))
+    }
     
     
 }

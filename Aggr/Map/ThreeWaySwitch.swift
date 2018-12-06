@@ -33,10 +33,12 @@ class ThreeWaySwitch : UIControl {
     public var selectorView : UIImageView = UIImageView()
     private var currentSelectorPosition : Position = Position.Middle {
         willSet(newSelectorPosition) {
+            runWillGoUserDefinedAction(forNewPosition: newSelectorPosition)
             print("About to set totalSteps to \(newSelectorPosition)")
         }
         didSet {
             changePosition(to: currentSelectorPosition);
+            runDidGoUserDefinedAction(forNewPosition: currentSelectorPosition)
         }
     }
     //TODO: Add functionality like currentSelectorPosition but for setting ang getting shadows and stuff
