@@ -80,6 +80,9 @@
 		C3FD024621B73A6400FB2DB5 /* day_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3FD024521B73A6400FB2DB5 /* day_mode.json */; };
 		C3FD024721B73A6400FB2DB5 /* day_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3FD024521B73A6400FB2DB5 /* day_mode.json */; };
 		C3FD024821B73A6400FB2DB5 /* day_mode.json in Resources */ = {isa = PBXBuildFile; fileRef = C3FD024521B73A6400FB2DB5 /* day_mode.json */; };
+		C3FD028721B882E200FB2DB5 /* ThreeWaySwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD028621B882E200FB2DB5 /* ThreeWaySwitch.swift */; };
+		C3FD028821B882E200FB2DB5 /* ThreeWaySwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD028621B882E200FB2DB5 /* ThreeWaySwitch.swift */; };
+		C3FD028921B882E200FB2DB5 /* ThreeWaySwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD028621B882E200FB2DB5 /* ThreeWaySwitch.swift */; };
 		C3FD6B122182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
 		C3FD6B132182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
 		C3FD6B142182454600AB8665 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6B102182454600AB8665 /* MapViewController.swift */; };
@@ -143,6 +146,7 @@
 		C3AA821E21AF341E0021F3EF /* MapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyle.swift; sourceTree = "<group>"; };
 		C3C6D810218D732A00DA25FF /* PullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
 		C3FD024521B73A6400FB2DB5 /* day_mode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = day_mode.json; sourceTree = "<group>"; };
+		C3FD028621B882E200FB2DB5 /* ThreeWaySwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWaySwitch.swift; sourceTree = "<group>"; };
 		C3FD6B102182454600AB8665 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		C3FD6B112182454600AB8665 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapViewController.xib; path = Aggr/MapViewController.xib; sourceTree = SOURCE_ROOT; };
 		D0BDC8813B567A202F0F9797 /* Pods_AggrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +269,7 @@
 		C30ED20121ADC85F0008F842 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				C3FD028621B882E200FB2DB5 /* ThreeWaySwitch.swift */,
 				C3C6D810218D732A00DA25FF /* PullUpController.swift */,
 				C3FD6B102182454600AB8665 /* MapViewController.swift */,
 				C3AA821E21AF341E0021F3EF /* MapStyle.swift */,
@@ -621,6 +626,7 @@
 				C3024A47214894590075928B /* AppDelegate.swift in Sources */,
 				C35F6E13215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C323E395217D32CF00015C6F /* Constants.swift in Sources */,
+				C3FD028721B882E200FB2DB5 /* ThreeWaySwitch.swift in Sources */,
 				C3AA821F21AF341E0021F3EF /* MapStyle.swift in Sources */,
 				21F36FDD216BD70C00DE5067 /* SetupBirdVehicles.swift in Sources */,
 				C30ED20B21ADCF170008F842 /* SplashView.swift in Sources */,
@@ -647,6 +653,7 @@
 				C35C53702165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E14215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C3DFDEBF2188BD80006F9CC8 /* Constants.swift in Sources */,
+				C3FD028821B882E200FB2DB5 /* ThreeWaySwitch.swift in Sources */,
 				C3AA822021AF341E0021F3EF /* MapStyle.swift in Sources */,
 				C3DFDEC72188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
 				C30ED20C21ADCF170008F842 /* SplashView.swift in Sources */,
@@ -673,6 +680,7 @@
 				C35C53712165B58700FBD032 /* GetAllVehicles.swift in Sources */,
 				C35F6E15215C28BD00F01F13 /* LogoAndImageHandling.swift in Sources */,
 				C3DFDEC02188BD81006F9CC8 /* Constants.swift in Sources */,
+				C3FD028921B882E200FB2DB5 /* ThreeWaySwitch.swift in Sources */,
 				C3AA822121AF341E0021F3EF /* MapStyle.swift in Sources */,
 				C3DFDEC82188C2A8006F9CC8 /* SetupBirdVehicles.swift in Sources */,
 				C30ED20D21ADCF170008F842 /* SplashView.swift in Sources */,

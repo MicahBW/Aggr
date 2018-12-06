@@ -19,6 +19,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var locationManager = CLLocationManager()
     var pullUpController = VehicleListViewController()
     
+    let tws = ThreeWaySwitch(frame: CGRect(x: 16, y: 670, width: 80, height: 35))
+    
     //var showState
     
     
@@ -32,10 +34,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         mapView.StylizeForStyleMode(mode: MapStyleModes.Night)
         self.view = mapView
         
+        
         locationManager.requestWhenInUseAuthorization()
         
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
+        
+        
+        
         switch(CLLocationManager.authorizationStatus()) {
         case .authorizedWhenInUse:
             print("Authorized Always")
@@ -68,7 +74,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         button.layer.cornerRadius = 20
         self.view.addSubview(button)
         */
-        
+        /*
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             mapView.StylizeForStyleMode(mode: MapStyleModes.Christmas)
         }
@@ -95,11 +101,25 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 21) {
             mapView.StylizeForStyleMode(mode: MapStyleModes.Christmas)
-        }
+         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 24) {
             mapView.StylizeForStyleMode(mode: MapStyleModes.Day)
         }
+        */
+        
+        
+        mapView.settings.consumesGesturesInView = false
+
+    
+        tws.leftView.image = #imageLiteral(resourceName: "BikeIcon")
+        tws.rightView.image = #imageLiteral(resourceName: "ScooterIcon")
+        
+        tws.isUserInteractionEnabled = true
+        
+        self.view.addSubview(tws)
+        self.view.bringSubview(toFront: tws)
+        
         
         
         
